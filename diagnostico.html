@@ -47,6 +47,9 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--sol);outline-offset
 .intro h1{font-size:clamp(2rem,5vw,2.9rem);margin-bottom:18px}
 .intro p{color:var(--tinta-suave);max-width:46ch;margin:0 auto 30px}
 .intro .meta-nota{font-family:'Space Mono',monospace;font-size:.75rem;color:var(--tinta-suave);margin-top:22px}
+.puerta{max-width:420px;margin:8px auto 0;text-align:left;background:var(--papel-claro);border:1px solid var(--linea);border-radius:14px;padding:30px 28px}
+.puerta .btn{width:100%;text-align:center;margin-top:8px}
+.puerta-nota{font-family:'Space Mono',monospace;font-size:.72rem;color:var(--tinta-suave);text-align:center;margin-top:12px}
 
 /* PROGRESO */
 .prog-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px}
@@ -130,13 +133,20 @@ footer{background:var(--oscuro);color:rgba(246,240,226,.7);padding:28px 0;font-s
 </header>
 
 <main class="wrap app">
-  <!-- INTRO -->
+  <!-- INTRO / PUERTA DE DATOS -->
   <section id="intro" class="intro">
-    <span class="eyebrow">Gratis · 3 minutos · Sin llamadas de venta</span>
+    <span class="eyebrow">Gratis · 3 minutos</span>
     <h1>¿Qué tan fácil es encontrar tu negocio hoy?</h1>
-    <p>17 preguntas rápidas sobre tu negocio. Al final obtienes un puntaje sobre 100, un diagnóstico por área y el plan exacto que necesitas. Nadie te llama a vender: tú decides el siguiente paso.</p>
-    <button class="btn" id="empezar">Empezar mi diagnóstico</button>
-    <p class="meta-nota">No pedimos datos hasta el final. Responde con honestidad — "no sé" también es una respuesta válida.</p>
+    <p>17 preguntas rápidas y obtienes tu puntaje sobre 100, un diagnóstico por área y el plan exacto que necesitas. Para empezar, déjanos tus datos.</p>
+    <div class="puerta">
+      <div class="campo"><label for="p-nom">Tu nombre</label><input id="p-nom" type="text" autocomplete="name" placeholder="Cómo te llamas"></div>
+      <div class="campo"><label for="p-neg">Nombre del negocio</label><input id="p-neg" type="text" placeholder="Tu negocio"></div>
+      <div class="campo"><label for="p-mail">Email</label><input id="p-mail" type="email" autocomplete="email" placeholder="tu@correo.com"></div>
+      <div class="campo"><label for="p-wa">WhatsApp</label><input id="p-wa" type="tel" autocomplete="tel" placeholder="+507 ..."></div>
+      <button class="btn" id="empezar" disabled>Empezar mi diagnóstico</button>
+      <p class="puerta-nota" id="puerta-nota">Completa los cuatro campos para desbloquear el diagnóstico.</p>
+    </div>
+    <p class="meta-nota">Responde con honestidad — "no sé" también es una respuesta válida.</p>
   </section>
 
   <!-- CUESTIONARIO -->
@@ -256,11 +266,25 @@ function semaforoPct(pct){
 // ---- ESTADO ----
 let idx=0;
 const respuestas=new Array(PREGUNTAS.length).fill(null);
+const lead={nombre:"",negocio:"",email:"",whatsapp:""};
 
 const $=id=>document.getElementById(id);
 const introEl=$("intro"), quizEl=$("quiz"), resEl=$("resultado");
 
-$("empezar").addEventListener("click",()=>{
+// ---- PUERTA DE DATOS ----
+const gNom=$("p-nom"), gNeg=$("p-neg"), gMail=$("p-mail"), gWa=$("p-wa"), gBtn=$("empezar");
+function emailValido(v){ return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v); }
+function validarPuerta(){
+  const ok = gNom.value.trim() && gNeg.value.trim() && emailValido(gMail.value.trim()) && gWa.value.trim();
+  gBtn.disabled = !ok;
+  return ok;
+}
+[gNom,gNeg,gMail,gWa].forEach(el=>el.addEventListener("input",validarPuerta));
+
+gBtn.addEventListener("click",()=>{
+  if(!validarPuerta()) return;
+  lead.nombre=gNom.value.trim(); lead.negocio=gNeg.value.trim();
+  lead.email=gMail.value.trim(); lead.whatsapp=gWa.value.trim();
   introEl.hidden=true; quizEl.hidden=false; idx=0; render();
   window.scrollTo({top:0,behavior:"smooth"});
 });
@@ -352,15 +376,9 @@ function mostrarResultado(){
       <a class="btn" href="/#ofertas">Ver los detalles del plan</a>
     </div>
 
-    <div class="captura">
-      <h3>Recibe tu reporte completo</h3>
-      <p class="lead">Te enviamos el desglose completo por área, con los pasos concretos para subir tu puntaje. Sin compromiso.</p>
-      <div class="campo"><label for="nom">Tu nombre</label><input id="nom" type="text" autocomplete="name" placeholder="Cómo te llamas"></div>
-      <div class="campo"><label for="neg">Nombre del negocio</label><input id="neg" type="text" placeholder="Tu negocio"></div>
-      <div class="campo"><label for="mail">Email</label><input id="mail" type="email" autocomplete="email" placeholder="tu@correo.com"></div>
-      <div class="campo"><label for="wa">WhatsApp (opcional)</label><input id="wa" type="tel" autocomplete="tel" placeholder="+507 ..."></div>
-      <button class="btn" id="enviar">Enviar mi reporte</button>
-      <p class="fina">Te respondemos en menos de 24 horas · Panamá</p>
+    <div class="captura" style="text-align:center">
+      <h3>Nos pondremos en contacto contigo</h3>
+      <p class="lead" style="margin-bottom:0">Gracias, ${lead.nombre||"—"}. Revisaremos el diagnóstico de <strong>${lead.negocio||"tu negocio"}</strong> y te escribiremos a <strong>${lead.email}</strong> con los pasos concretos para subir tu puntaje. Sin compromiso.</p>
     </div>
 
     <div class="reinicia"><button id="otra">↺ Hacer el diagnóstico de nuevo</button></div>
@@ -370,37 +388,6 @@ function mostrarResultado(){
   $("prog") && ($("prog").style.width="100%");
   window.scrollTo({top:0,behavior:"smooth"});
   requestAnimationFrame(()=>{ const rb=$("rbar"); if(rb) rb.style.width=total+"%"; });
-
-  $("enviar").addEventListener("click",()=>{
-    const nom=$("nom").value.trim(), neg=$("neg").value.trim(), mail=$("mail").value.trim(), wa=$("wa").value.trim();
-    if(!mail || mail.indexOf("@")<1){ $("mail").focus(); $("mail").style.borderColor="#E8503A"; return; }
-    // resumen de respuestas para el cuerpo del correo
-    let detalle="";
-    PREGUNTAS.forEach((p,i)=>{
-      const r=respuestas[i];
-      detalle+=`\n${i+1}. ${p.q}\n   → ${r!==null?p.o[r][0]+" ("+p.o[r][1]+" pts)":"sin responder"}`;
-    });
-    let desglose="";
-    for(const k in BLOQUES){ desglose+=`\n- ${BLOQUES[k].nombre}: ${porBloque[k]}/${BLOQUES[k].max}`; }
-    const asunto=`Diagnóstico de visibilidad: ${neg||nom||"nuevo lead"} — ${total}/100`;
-    const cuerpo=
-`Hola MALAYA, completé el diagnóstico y quiero mi reporte completo.
-
-Nombre: ${nom||"—"}
-Negocio: ${neg||"—"}
-Email: ${mail}
-WhatsApp: ${wa||"—"}
-
-PUNTAJE: ${total}/100 — ${b.n}
-Mayor fuga: ${BLOQUES[peor].nombre}
-Plan sugerido: ${plan.h}
-
-Desglose por área:${desglose}
-
-Respuestas:${detalle}
-`;
-    window.location.href=`mailto:hola@malayadigital.co?subject=${encodeURIComponent(asunto)}&body=${encodeURIComponent(cuerpo)}`;
-  });
 
   $("otra").addEventListener("click",()=>{
     idx=0; respuestas.fill(null);
