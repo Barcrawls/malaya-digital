@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MALAYA — Que te encuentren</title>
+<link rel="canonical" href="https://malayadigital.co/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Malaya Digital — Que te encuentren">
+<meta property="og:description" content="Optimización de presencia y visibilidad online para negocios de experiencias en Panamá. Diagnóstico gratis: descubre qué tan fácil es encontrar tu negocio hoy.">
+<meta property="og:url" content="https://malayadigital.co/">
+<meta property="og:locale" content="es_PA">
+<meta name="twitter:card" content="summary">
+<meta name="description" content="Optimización de presencia y visibilidad online para negocios de experiencias en Panamá. Diagnóstico gratis. No hacemos marketing: te ponemos en orden en internet.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 145'%3E%3Crect width='120' height='145' rx='10' fill='%2314424A'/%3E%3Crect x='13' y='13' width='94' height='119' rx='5' fill='%23FBF7EC'/%3E%3Cpath d='M60 38c-14 0-24 10-24 24 0 17 24 40 24 40s24-23 24-40c0-14-10-24-24-24z' fill='%23E8503A'/%3E%3Ccircle cx='60' cy='62' r='9' fill='%23FBF7EC'/%3E%3Cpath d='M13 110c16-8 31-8 47-1s32 5 47-2v20a5 5 0 0 1-5 5H18a5 5 0 0 1-5-5z' fill='%231C7A8C'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Archivo:wght@400;500;600&family=Caveat:wght@600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --papel:#F6F0E2;
+  --papel-claro:#FBF7EC;
+  --tinta:#14424A;
+  --tinta-suave:#3E656C;
+  --sello:#E8503A;
+  --mar:#1C7A8C;
+  --sol:#E9A820;
+  --oscuro:#0C2A30;
+  --linea:rgba(20,66,74,.22);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Archivo',sans-serif;
+  background:var(--papel);
+  color:var(--tinta);
+  line-height:1.6;
+  font-size:17px;
+}
+/* Franja airmail — la firma visual */
+.airmail{
+  height:12px;
+  background:repeating-linear-gradient(-45deg,
+    var(--sello) 0 16px, var(--papel-claro) 16px 32px, var(--mar) 32px 48px, var(--papel-claro) 48px 64px);
+}
+.wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:'Bricolage Grotesque',sans-serif;line-height:1.1;letter-spacing:-.01em}
+.mano{font-family:'Caveat',cursive}
+.mono{font-family:'Space Mono',monospace}
+.eyebrow{
+  font-family:'Space Mono',monospace;font-size:.72rem;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--sello);margin-bottom:14px;display:block;
+}
+section{padding:88px 0}
+a.btn,button.btn{
+  display:inline-block;background:var(--sello);color:var(--papel-claro);
+  font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:1.05rem;
+  padding:15px 32px;border-radius:6px;text-decoration:none;border:none;cursor:pointer;
+  transition:transform .15s ease, box-shadow .15s ease;
+}
+a.btn:hover,button.btn:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(232,80,58,.35)}
+a.btn.sec{background:transparent;color:var(--tinta);border:2px solid var(--tinta)}
+a.btn.sec:hover{box-shadow:0 6px 18px rgba(20,66,74,.2)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--sol);outline-offset:3px}
+
+/* NAV */
+nav{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:20px 0;
+}
+.logo{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:1.4rem;letter-spacing:.04em;text-decoration:none;color:var(--tinta);display:flex;align-items:center;gap:10px}
+.logo span{color:var(--sello)}
+nav .links{display:flex;gap:26px;align-items:center}
+nav .links a{color:var(--tinta);text-decoration:none;font-size:.92rem;font-weight:500}
+nav .links a:hover{color:var(--sello)}
+nav .links a.cta{background:var(--tinta);color:var(--papel);padding:9px 18px;border-radius:6px}
+
+/* HERO — la postal */
+.hero{padding:56px 0 96px}
+.postal{
+  background:var(--papel-claro);
+  border:1px solid var(--linea);
+  border-radius:10px;
+  box-shadow:0 14px 44px rgba(12,42,48,.14);
+  padding:8px;
+  transform:rotate(-.6deg);
+}
+.postal-inner{
+  border:2px solid var(--linea);
+  border-radius:6px;
+  display:grid;
+  grid-template-columns:1.25fr 1fr;
+}
+.postal-msg{padding:46px 42px;border-right:2px dashed var(--linea)}
+.postal-msg .mano{font-size:2rem;color:var(--mar);display:block;margin-bottom:10px}
+.postal-msg h1{font-size:clamp(2.3rem,5.2vw,3.7rem);font-weight:800;margin-bottom:20px}
+.postal-msg h1 em{font-style:normal;color:var(--sello)}
+.postal-msg p{font-size:1.1rem;color:var(--tinta-suave);max-width:34ch;margin-bottom:30px}
+.postal-dir{padding:38px 34px;display:flex;flex-direction:column;justify-content:space-between}
+.estampilla{
+  align-self:flex-end;width:96px;height:116px;
+  background:var(--mar);color:var(--papel-claro);
+  border:6px solid var(--papel-claro);
+  outline:2px dashed var(--linea);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;
+  transform:rotate(3deg);text-align:center;padding:8px;
+}
+.estampilla .mono{font-size:.6rem;letter-spacing:.1em}
+.estampilla strong{font-family:'Bricolage Grotesque',sans-serif;font-size:1.6rem;line-height:1}
+.matasellos{
+  position:relative;align-self:flex-end;margin:-86px 96px 0 0;
+  width:92px;height:92px;border:2px solid var(--tinta-suave);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;text-align:center;
+  font-family:'Space Mono',monospace;font-size:.58rem;letter-spacing:.08em;
+  color:var(--tinta-suave);transform:rotate(-8deg);opacity:.75;
+}
+.dir-lineas{margin-top:auto}
+.dir-lineas p{
+  border-bottom:2px solid var(--linea);
+  font-family:'Caveat',cursive;font-size:1.35rem;color:var(--tinta-suave);
+  padding:8px 2px 2px;
+}
+@media(max-width:820px){
+  .postal-inner{grid-template-columns:1fr}
+  .postal-msg{border-right:none;border-bottom:2px dashed var(--linea);padding:34px 26px}
+  .postal-dir{padding:26px}
+  .matasellos{margin:-78px 78px 0 0}
+}
+
+/* CARTA — historia de origen */
+.carta-sec{background:var(--papel)}
+.carta{
+  max-width:760px;margin:0 auto;background:var(--papel-claro);
+  border:1px solid var(--linea);border-radius:8px;padding:52px 56px;
+  box-shadow:0 12px 36px rgba(12,42,48,.1);transform:rotate(.4deg);position:relative;
+}
+.carta::before{
+  content:"POR QUÉ EXISTE ESTO";position:absolute;top:-12px;left:40px;
+  background:var(--sol);color:var(--oscuro);
+  font-family:'Space Mono',monospace;font-size:.66rem;letter-spacing:.14em;
+  padding:5px 14px;border-radius:20px;
+}
+.carta .saludo{font-family:'Caveat',cursive;font-size:1.7rem;color:var(--mar);margin-bottom:18px}
+.carta p{margin-bottom:16px;color:var(--tinta)}
+.carta p.destaca{
+  border-left:3px solid var(--sello);padding-left:18px;
+  font-weight:600;color:var(--tinta);
+}
+.carta .firma{font-family:'Caveat',cursive;font-size:1.5rem;color:var(--tinta-suave);margin-top:26px;text-align:right}
+@media(max-width:720px){.carta{padding:36px 26px}}
+
+/* QUÉ ES / QUÉ NO ES */
+.no-mkt{background:var(--oscuro);color:var(--papel)}
+.no-mkt h2{font-size:clamp(1.9rem,4vw,2.7rem);max-width:22ch;margin-bottom:44px}
+.no-mkt h2 em{font-style:normal;color:var(--sol)}
+.dos-cols{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.col-card{border:1px solid rgba(246,240,226,.25);border-radius:10px;padding:32px}
+.col-card h3{font-size:1.15rem;margin-bottom:18px;display:flex;align-items:center;gap:10px}
+.col-card ul{list-style:none}
+.col-card li{padding:9px 0;border-bottom:1px solid rgba(246,240,226,.12);color:rgba(246,240,226,.85);font-size:.98rem}
+.col-card li:last-child{border-bottom:none}
+.tag-no{color:var(--sello)}
+.tag-si{color:var(--sol)}
+@media(max-width:720px){.dos-cols{grid-template-columns:1fr}}
+
+/* DIAGNÓSTICO */
+.diag{background:var(--papel-claro);border-top:1px solid var(--linea);border-bottom:1px solid var(--linea)}
+.diag .flexo{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.diag h2{font-size:clamp(1.9rem,4vw,2.6rem);margin-bottom:18px}
+.diag p.lead{color:var(--tinta-suave);margin-bottom:26px}
+.score-card{
+  background:var(--papel-claro);border:1px solid var(--linea);border-radius:12px;
+  padding:34px;box-shadow:0 10px 30px rgba(12,42,48,.1);transform:rotate(.8deg);
+}
+.score-num{font-family:'Space Mono',monospace;font-size:4rem;font-weight:700;color:var(--sello);line-height:1}
+.score-num small{font-size:1.4rem;color:var(--tinta-suave)}
+.score-bar{height:10px;background:rgba(20,66,74,.12);border-radius:6px;margin:18px 0 26px;overflow:hidden}
+.score-bar div{height:100%;width:42%;background:linear-gradient(90deg,var(--sello),var(--sol));border-radius:6px}
+.score-item{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px dashed var(--linea);font-size:.95rem}
+.score-item:last-child{border-bottom:none}
+.score-item .mono{font-size:.8rem}
+.ok{color:var(--mar);font-weight:600}
+.mal{color:var(--sello);font-weight:600}
+@media(max-width:820px){.diag .flexo{grid-template-columns:1fr}}
+
+/* OFERTAS */
+.ofertas{background:var(--papel-claro)}
+.ofertas h2{font-size:clamp(1.9rem,4vw,2.6rem);margin-bottom:12px}
+.ofertas .sub{color:var(--tinta-suave);max-width:56ch;margin-bottom:52px}
+.sprint{
+  border:2px solid var(--tinta);border-radius:12px;padding:34px;
+  display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center;margin-bottom:56px;
+  background:var(--papel);
+}
+.sprint h3{font-size:1.4rem;margin-bottom:8px}
+.sprint p{color:var(--tinta-suave);font-size:.98rem;max-width:60ch}
+.sprint .precio{font-family:'Space Mono',monospace;font-size:2rem;font-weight:700;white-space:nowrap}
+.sprint .precio small{display:block;font-size:.72rem;color:var(--tinta-suave);font-weight:400;text-align:right}
+@media(max-width:720px){.sprint{grid-template-columns:1fr}}
+.planes{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.plan{
+  background:var(--papel);border:1px solid var(--linea);border-radius:12px;padding:32px 28px;
+  display:flex;flex-direction:column;transition:transform .18s ease, box-shadow .18s ease;
+}
+.plan:hover{transform:translateY(-5px);box-shadow:0 14px 34px rgba(12,42,48,.13)}
+.plan.destacado{border:2px solid var(--sello);position:relative}
+.plan.destacado::before{
+  content:"El más elegido";position:absolute;top:-13px;left:26px;
+  background:var(--sello);color:var(--papel-claro);
+  font-family:'Space Mono',monospace;font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;
+  padding:4px 12px;border-radius:20px;
+}
+.plan h3{font-size:1.35rem}
+.plan .para{font-size:.85rem;color:var(--tinta-suave);margin:6px 0 18px;min-height:42px}
+.plan .precio{font-family:'Space Mono',monospace;font-size:2.1rem;font-weight:700}
+.plan .precio small{font-size:.85rem;color:var(--tinta-suave);font-weight:400}
+.plan .setup{font-size:.75rem;color:var(--tinta-suave);margin-bottom:20px;font-family:'Space Mono',monospace}
+.plan ul{list-style:none;flex-grow:1;margin-bottom:24px}
+.plan li{padding:8px 0 8px 26px;position:relative;font-size:.92rem;border-bottom:1px dashed var(--linea)}
+.plan li:last-child{border-bottom:none}
+.plan li::before{content:"✦";position:absolute;left:2px;color:var(--sol);font-size:.8rem}
+.plan a.btn{text-align:center}
+@media(max-width:900px){.planes{grid-template-columns:1fr}}
+
+/* CASO DE ESTUDIO */
+.caso .eyebrow{color:var(--mar)}
+.caso h2{font-size:clamp(1.9rem,4vw,2.6rem);margin-bottom:12px}
+.caso .sub{color:var(--tinta-suave);max-width:60ch;margin-bottom:48px}
+.caso-card{
+  background:var(--oscuro);color:var(--papel);border-radius:14px;overflow:hidden;
+  box-shadow:0 18px 50px rgba(12,42,48,.25);
+}
+.caso-head{
+  padding:38px 42px;border-bottom:1px solid rgba(246,240,226,.15);
+  display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;
+}
+.caso-head h3{font-size:1.7rem}
+.caso-head .mono{font-size:.78rem;color:var(--sol);letter-spacing:.1em}
+.caso-stats{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid rgba(246,240,226,.15)}
+.stat{padding:32px 24px;border-right:1px solid rgba(246,240,226,.15)}
+.stat:last-child{border-right:none}
+.stat .num{font-family:'Space Mono',monospace;font-size:2rem;font-weight:700;color:var(--sol)}
+.stat .lbl{font-size:.8rem;color:rgba(246,240,226,.7);margin-top:6px;line-height:1.4}
+.caso-body{padding:36px 42px;display:grid;grid-template-columns:1fr 1fr;gap:36px}
+.caso-body h4{font-family:'Bricolage Grotesque',sans-serif;font-size:1rem;color:var(--sol);margin-bottom:12px}
+.caso-body ul{list-style:none}
+.caso-body li{padding:7px 0;font-size:.93rem;color:rgba(246,240,226,.85);border-bottom:1px solid rgba(246,240,226,.1)}
+.caso-body li:last-child{border-bottom:none}
+.caso-foot{padding:24px 42px;background:rgba(246,240,226,.06)}
+.caso-foot p{font-family:'Caveat',cursive;font-size:1.4rem;color:var(--sol)}
+/* Caso completo expandible */
+.caso-geek{border-top:1px solid rgba(246,240,226,.15)}
+.caso-geek summary{
+  padding:20px 42px;cursor:pointer;list-style:none;
+  font-family:'Space Mono',monospace;font-size:.8rem;letter-spacing:.1em;
+  color:var(--sol);display:flex;align-items:center;gap:10px;
+  transition:background .15s ease;
+}
+.caso-geek summary::-webkit-details-marker{display:none}
+.caso-geek summary:hover{background:rgba(246,240,226,.05)}
+.caso-geek summary::after{content:"+";font-size:1.1rem;margin-left:auto}
+.caso-geek[open] summary::after{content:"−"}
+.geek-body{padding:10px 42px 42px}
+.geek-body h5{
+  font-family:'Space Mono',monospace;font-size:.72rem;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--sol);margin:30px 0 14px;
+}
+.geek-body h5:first-child{margin-top:0}
+.geek-tabla{width:100%;border-collapse:collapse;font-size:.85rem}
+.geek-tabla th{
+  font-family:'Space Mono',monospace;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  color:rgba(246,240,226,.6);text-align:left;padding:10px 12px;
+  border-bottom:1px solid rgba(246,240,226,.25);
+}
+.geek-tabla td{
+  padding:11px 12px;border-bottom:1px solid rgba(246,240,226,.1);
+  color:rgba(246,240,226,.88);
+}
+.geek-tabla td.cambio{font-family:'Space Mono',monospace;color:var(--sol);font-weight:700;white-space:nowrap}
+.geek-tabla tr:last-child td{border-bottom:none}
+.geek-cols{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.geek-body ul{list-style:none}
+.geek-body li{padding:7px 0 7px 20px;position:relative;font-size:.88rem;color:rgba(246,240,226,.82);border-bottom:1px solid rgba(246,240,226,.08)}
+.geek-body li::before{content:"›";position:absolute;left:2px;color:var(--sol)}
+.geek-body li:last-child{border-bottom:none}
+.geek-nota{margin-top:26px;font-size:.75rem;color:rgba(246,240,226,.5);font-family:'Space Mono',monospace}
+@media(max-width:820px){
+  .caso-geek summary{padding:18px 28px}
+  .geek-body{padding:10px 28px 32px}
+  .geek-cols{grid-template-columns:1fr}
+  .geek-tabla{font-size:.78rem}
+  .geek-tabla th,.geek-tabla td{padding:8px 8px}
+}
+@media(max-width:820px){
+  .caso-stats{grid-template-columns:1fr 1fr}
+  .stat:nth-child(2){border-right:none}
+  .caso-body{grid-template-columns:1fr;padding:28px}
+  .caso-head{padding:28px}
+}
+
+/* QUIÉN */
+.quien .flexo{display:grid;grid-template-columns:auto 1fr;gap:48px;align-items:start}
+.quien-foto{
+  width:200px;height:240px;background:var(--mar);border-radius:8px;
+  border:8px solid var(--papel-claro);box-shadow:0 12px 30px rgba(12,42,48,.18);
+  transform:rotate(-2deg);display:flex;align-items:center;justify-content:center;
+  color:var(--papel-claro);font-family:'Caveat',cursive;font-size:1.3rem;text-align:center;padding:16px;
+}
+.quien h2{font-size:clamp(1.7rem,3.5vw,2.3rem);margin-bottom:18px}
+.quien p{color:var(--tinta-suave);max-width:62ch;margin-bottom:14px}
+.quien strong{color:var(--tinta)}
+@media(max-width:720px){.quien .flexo{grid-template-columns:1fr}.quien-foto{margin:0 auto}}
+
+/* CTA FINAL */
+.final{background:var(--sello);color:var(--papel-claro);text-align:center}
+.final .mano{font-size:2.2rem;display:block;margin-bottom:8px;opacity:.9}
+.final h2{font-size:clamp(2rem,4.5vw,3rem);max-width:22ch;margin:0 auto 26px}
+.final a.btn{background:var(--papel-claro);color:var(--sello)}
+.final .nota{margin-top:18px;font-size:.85rem;opacity:.85}
+
+/* BLOG */
+.blog-sec{background:var(--papel-claro);border-top:1px solid var(--linea)}
+.blog-sec h2{font-size:clamp(1.9rem,4vw,2.6rem);margin-bottom:12px}
+.blog-sec .sub{color:var(--tinta-suave);max-width:56ch;margin-bottom:44px}
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.post-card{
+  background:var(--papel);border:1px solid var(--linea);border-radius:12px;padding:30px 28px;
+  display:flex;flex-direction:column;text-decoration:none;color:var(--tinta);
+  transition:transform .18s ease, box-shadow .18s ease;
+}
+.post-card:hover{transform:translateY(-5px);box-shadow:0 14px 34px rgba(12,42,48,.13)}
+.post-card .cat{font-family:'Space Mono',monospace;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--sello);margin-bottom:12px}
+.post-card h3{font-family:'Bricolage Grotesque',sans-serif;font-size:1.15rem;line-height:1.3;margin-bottom:12px}
+.post-card p{font-size:.9rem;color:var(--tinta-suave);flex-grow:1;margin-bottom:18px}
+.post-card .leer{font-family:'Space Mono',monospace;font-size:.75rem;letter-spacing:.1em;color:var(--mar);font-weight:700}
+@media(max-width:900px){.blog-grid{grid-template-columns:1fr}}
+
+footer{background:var(--oscuro);color:rgba(246,240,226,.7);padding:36px 0;font-size:.85rem}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer a{color:var(--sol);text-decoration:none}
+
+@media (prefers-reduced-motion: reduce){
+  *{transition:none!important;scroll-behavior:auto!important}
+}
+</style>
+</head>
+<body>
+
+<div class="airmail" role="presentation"></div>
+
+<header class="wrap">
+  <nav>
+    <a class="logo" href="#" aria-label="MALAYA — inicio"><svg width="34" height="41" viewBox="0 0 120 145" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="120" height="145" rx="10" fill="#14424A"/><rect x="13" y="13" width="94" height="119" rx="5" fill="#FBF7EC"/><path d="M60 38c-14 0-24 10-24 24 0 17 24 40 24 40s24-23 24-40c0-14-10-24-24-24z" fill="#E8503A"/><circle cx="60" cy="62" r="9" fill="#FBF7EC"/><path d="M13 110c16-8 31-8 47-1s32 5 47-2v20a5 5 0 0 1-5 5H18a5 5 0 0 1-5-5z" fill="#1C7A8C"/></svg>MALAYA<span>.</span></a>
+    <div class="links">
+      <a href="#ofertas">Servicios</a>
+      <a href="#caso">Resultados</a>
+      <a href="#quien">Quiénes somos</a>
+      <a href="#blog">Blog</a>
+      <a class="cta" href="/diagnostico.html">Diagnóstico gratis</a>
+    </div>
+  </nav>
+</header>
+
+<!-- HERO: la postal -->
+<section class="hero wrap">
+  <div class="postal">
+    <div class="postal-inner">
+      <div class="postal-msg">
+        <span class="mano">¡Malaya! Ojalá estuvieras aquí…</span>
+        <h1>Tus clientes te están buscando. <em>Que te encuentren.</em></h1>
+        <p>Ponemos tu negocio en orden en todo internet: Google, Bing, Apple Maps, reseñas y tu sitio web. Para que aparezca, convenza y venda.</p>
+        <a class="btn" href="/diagnostico.html">Hacer mi diagnóstico gratis</a>
+      </div>
+      <div class="postal-dir">
+        <svg width="108" height="131" viewBox="0 0 120 145" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="align-self:flex-end;transform:rotate(3deg);filter:drop-shadow(0 4px 10px rgba(12,42,48,.18))"><rect width="120" height="145" rx="10" fill="#14424A"/><rect x="13" y="13" width="94" height="119" rx="5" fill="#FBF7EC"/><path d="M60 38c-14 0-24 10-24 24 0 17 24 40 24 40s24-23 24-40c0-14-10-24-24-24z" fill="#E8503A"/><circle cx="60" cy="62" r="9" fill="#FBF7EC"/><path d="M13 110c16-8 31-8 47-1s32 5 47-2v20a5 5 0 0 1-5 5H18a5 5 0 0 1-5-5z" fill="#1C7A8C"/></svg>
+        <div class="matasellos" aria-hidden="true">PANAMÁ · 2026 ·<br>ENCONTRADO</div>
+        <div class="dir-lineas">
+          <p>Para: el negocio que nadie encuentra</p>
+          <p>De: los clientes que sí te buscaron</p>
+          <p>Asunto: apareciste — te compramos</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIAGNÓSTICO -->
+<section class="diag" id="diagnostico">
+  <div class="wrap"><div class="flexo">
+    <div>
+      <span class="eyebrow">Gratis · 3 minutos</span>
+      <h2>¿Qué tan fácil es encontrar tu negocio hoy?</h2>
+      <p class="lead">Responde unas preguntas sobre tu negocio y te damos un puntaje sobre 100, un diagnóstico corto y el plan exacto que necesitas. Sin compromiso, sin llamadas de venta.</p>
+      <a class="btn" href="/diagnostico.html">Empezar mi diagnóstico</a>
+    </div>
+    <div class="score-card" aria-label="Ejemplo de cómo se ve el resultado del diagnóstico">
+      <span class="mono" style="font-size:.72rem;letter-spacing:.14em;color:var(--tinta-suave)">EJEMPLO DE RESULTADO</span>
+      <div class="score-num">42<small>/100</small></div>
+      <div class="score-bar"><div></div></div>
+      <div class="score-item"><span>Google Business Profile</span><span class="mono mal">INCOMPLETO</span></div>
+      <div class="score-item"><span>Reseñas y reputación</span><span class="mono mal">SIN RESPONDER</span></div>
+      <div class="score-item"><span>Sitio web / SEO básico</span><span class="mono ok">ACEPTABLE</span></div>
+      <div class="score-item"><span>Presencia en plataformas</span><span class="mono mal">AUSENTE</span></div>
+      <p style="font-family:'Space Mono',monospace;font-size:.68rem;color:var(--tinta-suave);margin-top:16px;text-align:center">Así se ve tu reporte. El tuyo se calcula con tus respuestas.</p>
+    </div>
+  </div></div>
+</section>
+
+<!-- CASO DE ESTUDIO -->
+<section class="caso wrap" id="caso">
+  <span class="eyebrow">Resultados reales</span>
+  <h2>Primero lo hicimos para nosotros</h2>
+  <p class="sub">Antes de ofrecer este servicio, lo aplicamos durante años a nuestras propias marcas de turismo y experiencias. Este es el estado actual de una de ellas.</p>
+
+  <div class="caso-card">
+    <div class="caso-head">
+      <div>
+        <span class="mono">CASO DE ESTUDIO Nº 1 · AUDITORÍA + OPTIMIZACIÓN · JULIO 2026</span>
+        <h3>The Panama Barcrawl</h3>
+      </div>
+      <span class="mono">panamabarcrawl.com</span>
+    </div>
+    <div class="caso-stats">
+      <div class="stat">
+        <div class="num">+337%</div>
+        <div class="lbl">clics orgánicos en un mes (149 → 651 por 28 días)</div>
+      </div>
+      <div class="stat">
+        <div class="num">+117%</div>
+        <div class="lbl">sobre el mejor mes en la historia del sitio — logrado en temporada baja</div>
+      </div>
+      <div class="stat">
+        <div class="num">9×</div>
+        <div class="lbl">más impresiones en Google (10,406 por 28 días)</div>
+      </div>
+      <div class="stat">
+        <div class="num">0→75%</div>
+        <div class="lbl">del tráfico ahora viene de búsquedas nuevas, no solo de quienes ya conocían la marca</div>
+      </div>
+    </div>
+    <div class="caso-body">
+      <div>
+        <h4>Qué se hizo</h4>
+        <ul>
+          <li>Auditoría completa: se encontraron y corrigieron errores técnicos que llevaban meses invisibles</li>
+          <li>Velocidad del sitio en verde según los estándares de Google</li>
+          <li>Reparación del schema de reseñas: las estrellas y precios ahora aparecen en los resultados</li>
+          <li>Títulos y descripciones reescritos contra las búsquedas reales de los clientes</li>
+          <li>Contenido de descubrimiento: guías que atraen a quien aún no conoce la marca</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Qué produjo</h4>
+        <ul>
+          <li>CTR de la búsqueda principal casi duplicado (17% → 32.8%) en la posición #1</li>
+          <li>Google otorgó sitelinks al sitio — seis enlaces extra bajo el resultado principal</li>
+          <li>Un canal nuevo de resultados enriquecidos: 93 clics que antes no existían</li>
+          <li>4× más visibilidad para el producto de mayor valor (crawls privados)</li>
+          <li>Los datos revelaron el mercado más rentable — y hoy guían la estrategia</li>
+        </ul>
+      </div>
+    </div>
+    <details class="caso-geek">
+      <summary>PARA LOS GEEKS: VER EL CASO COMPLETO</summary>
+      <div class="geek-body">
+        <h5>Resultados a un mes — ventana de 28 días (Google Search Console, medido 6–7 ago 2026)</h5>
+        <table class="geek-tabla">
+          <thead><tr><th>Métrica</th><th>Antes</th><th>Después</th><th>Cambio</th></tr></thead>
+          <tbody>
+            <tr><td>Clics orgánicos / 28 días</td><td>149</td><td>651</td><td class="cambio">+337%</td></tr>
+            <tr><td>vs. récord histórico del sitio (300, mar 2025)</td><td>—</td><td>651</td><td class="cambio">+117% en temporada baja</td></tr>
+            <tr><td>Impresiones / 28 días</td><td>~1,000–1,200</td><td>10,406</td><td class="cambio">~9×</td></tr>
+            <tr><td>CTR "panama bar crawl"</td><td>17%</td><td>32.8% (pos. 1.1)</td><td class="cambio">+93% rel.</td></tr>
+            <tr><td>Impresiones sin marca (participación)</td><td>~0%</td><td>~75%</td><td class="cambio">objetivo de 2 trimestres, en 1 mes</td></tr>
+            <tr><td>CTR producto premium</td><td>0.77%</td><td>1.52%</td><td class="cambio">2×</td></tr>
+            <tr><td>Impresiones pág. crawls privados</td><td>366</td><td>1,365</td><td class="cambio">~4×</td></tr>
+            <tr><td>Fragmentos de producto (rich results)</td><td>0</td><td>93 clics / 1,367 impr.</td><td class="cambio">canal nuevo</td></tr>
+            <tr><td>Core Web Vitals</td><td>fuera de rango</td><td>LCP 1,370 ms · INP 88 ms · CLS 0.01</td><td class="cambio">verde</td></tr>
+          </tbody>
+        </table>
+
+        <h5>Intervenciones (julio 2026)</h5>
+        <div class="geek-cols">
+          <ul>
+            <li>Canonicalización de dominio (www → dominio limpio) + verificación de sitemap</li>
+            <li>Noindex condicional y redirecciones 301 sobre páginas basura indexadas</li>
+            <li>Reparación del schema AggregateRating (Judge.me): 5 rich snippets válidos, 0 errores en GSC</li>
+            <li>Títulos y metadescripciones reescritos contra consultas reales del reporte de rendimiento</li>
+          </ul>
+          <ul>
+            <li>Reconstrucción de la página de crawls privados: jerarquía H, FAQ ×10, enlaces internos</li>
+            <li>Artículo pilar + clúster de apoyo (respuesta directa en 75 palabras, FAQ, autor real, foto propia)</li>
+            <li>Consolidación de contenido duplicado con redirecciones 301</li>
+            <li>GBP endurecido (categorías, servicios, posts con UTM) + Bing Places + Apple Business Connect</li>
+          </ul>
+        </div>
+
+        <h5>Conclusiones</h5>
+        <ul>
+          <li>La corrección técnica precede al contenido: el schema y la consolidación habilitaron canales que ningún artículo habría producido solo</li>
+          <li>Reescribir títulos contra consultas reales es la palanca de mayor retorno inmediato: CTR casi duplicado sin cambio de posición</li>
+          <li>El contenido de descubrimiento cambió la naturaleza del canal: de captar demanda existente a generar demanda nueva</li>
+          <li>Los datos revelan estrategia, no solo rendimiento: el reporte por países hoy informa contenido y alianzas de la marca</li>
+        </ul>
+
+        <p class="geek-nota">Fuente: Google Search Console (propiedad de dominio panamabarcrawl.com), exportaciones del 6–8 de agosto de 2026. Línea base documentada en julio de 2026. Sitelinks otorgados en resultados de marca durante el período.</p>
+      </div>
+    </details>
+    <div class="caso-foot">
+      <p>"Que te encuentren no es suerte: es trabajo bien hecho."</p>
+    </div>
+  </div>
+</section>
+
+<!-- OFERTAS -->
+<section class="ofertas" id="ofertas">
+  <div class="wrap">
+    <span class="eyebrow">Servicios</span>
+    <h2>Un camino para cada negocio</h2>
+    <p class="sub">Empieza con el diagnóstico gratis. Después, elige: lo arreglamos una vez y te enseñamos a mantenerlo — o lo manejamos por ti, al nivel que necesites.</p>
+
+    <div class="sprint">
+      <div>
+        <span class="mono" style="font-size:.7rem;letter-spacing:.14em;color:var(--sello)">PAGO ÚNICO</span>
+        <h3>Puesta a Punto</h3>
+        <p>Lo arreglamos todo una vez — Google, sitio, reseñas, directorios — y te entregamos tu Manual del Propietario con entrenamiento incluido, para que tú mismo lo mantengas en 20 minutos por semana. Con 30 días de soporte.</p>
+      </div>
+      <div>
+        <div class="precio">$1,500<small>una sola vez</small></div>
+      </div>
+    </div>
+
+    <div class="planes">
+      <div class="plan">
+        <h3>Presencia</h3>
+        <p class="para">Para el negocio que solo necesita estar en orden — y mantenerse así.</p>
+        <div class="precio">$450<small>/mes</small></div>
+        <div class="setup">SIN COSTO DE INICIO</div>
+        <ul>
+          <li>Arreglo completo de tu Google Business Profile</li>
+          <li>4 publicaciones al mes en tu perfil</li>
+          <li>Todas tus reseñas respondidas en 48h</li>
+          <li>Sistema para generar reseñas nuevas</li>
+          <li>Reporte mensual simple: visitas, llamadas, clics</li>
+        </ul>
+        <a class="btn sec" href="#contacto">Empezar aquí</a>
+      </div>
+
+      <div class="plan destacado">
+        <h3>Visibilidad</h3>
+        <p class="para">Para el que quiere crecer: aparecer antes que su competencia y convertir más.</p>
+        <div class="precio">$950<small>/mes</small></div>
+        <div class="setup">+ $500 INICIO · MÍN. 3 MESES</div>
+        <ul>
+          <li>Todo lo del plan Presencia</li>
+          <li>SEO completo de tu sitio (ES + EN)</li>
+          <li>Alta en Bing Places, Apple Maps y las plataformas de tu industria</li>
+          <li>2 contenidos SEO al mes</li>
+          <li>1 email mensual a tu base de clientes</li>
+          <li>Reporte con posiciones en Google + reunión trimestral</li>
+        </ul>
+        <a class="btn" href="#contacto">Quiero crecer</a>
+      </div>
+
+      <div class="plan">
+        <h3>Dominio</h3>
+        <p class="para">Tu presencia online completa, delegada a un equipo. Solo 3 cupos.</p>
+        <div class="precio">$3,500<small>/mes</small></div>
+        <div class="setup">+ $1,500 INICIO · MÍN. 3 MESES</div>
+        <ul>
+          <li>Todo lo del plan Visibilidad</li>
+          <li>Redes sociales completas (12–16 posts/mes)</li>
+          <li>Sesión de foto/video profesional trimestral</li>
+          <li>Email marketing con automatizaciones</li>
+          <li>4 contenidos SEO al mes</li>
+          <li>Reunión mensual de estrategia + línea directa</li>
+        </ul>
+        <a class="btn sec" href="#contacto">Aplicar a un cupo</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CARTA: por qué existe -->
+<section class="carta-sec">
+  <div class="wrap">
+    <div class="carta">
+      <p class="saludo">Te cuento cómo llegamos aquí…</p>
+      <p>Llevo casi una década operando negocios de turismo y experiencias. Y durante años asumí que la parte digital de mis negocios estaba resuelta — el sitio funcionaba, las reservas llegaban, ¿qué más había que revisar?</p>
+      <p>Hasta que un día decidí auditar mi propio sitio a fondo. Lo que encontré me sorprendió: errores técnicos invisibles, cosas básicas ausentes, oportunidades perdiéndose todos los días en silencio. Y ahí entendí algo que me cambió el enfoque: <em>cuando uno no sabe de estos temas, ni siquiera sabe que tiene el problema.</em></p>
+      <p>Me puse a arreglarlo todo, pieza por pieza. Al mes siguiente, el sitio rompió su récord histórico de tráfico. En temporada baja.</p>
+      <p>Poco después, un amigo con su propio negocio me pidió ayuda con exactamente esto. Y ahí cayó la ficha: si él lo necesitaba, hay miles de negocios en la misma situación — pagando, publicando, esperando… sin poder ver lo que está roto por debajo.</p>
+      <p class="destaca">MALAYA existe para eso: para que sepas exactamente en qué estado está tu presencia online, qué hay que arreglar, y que quede arreglado de verdad.</p>
+      <p class="firma">— Ciro Jaén, fundador</p>
+    </div>
+  </div>
+</section>
+
+<!-- QUÉ NO ES / QUÉ ES -->
+<section class="no-mkt">
+  <div class="wrap">
+    <span class="eyebrow">Lo primero que debes saber</span>
+    <h2>No hacemos marketing. <em>Construimos tu presencia.</em></h2>
+    <div class="dos-cols">
+      <div class="col-card">
+        <h3><span class="tag-no">✕</span> Lo que NO somos</h3>
+        <ul>
+          <li>Campañas de publicidad que dejan de funcionar cuando dejas de pagar</li>
+          <li>Likes, seguidores y métricas de vanidad</li>
+          <li>Promesas de "primer lugar en Google garantizado"</li>
+          <li>Retainers eternos sin saber qué estás pagando</li>
+          <li>Atajos ni trucos: lo que se construye con hacks, la plataforma lo borra de un plumazo</li>
+        </ul>
+      </div>
+      <div class="col-card">
+        <h3><span class="tag-si">✦</span> Lo que SÍ hacemos</h3>
+        <ul>
+          <li>Tu Google Business Profile completo, correcto y activo</li>
+          <li>Tu sitio web optimizado para que Google (y la IA) lo entiendan</li>
+          <li>Tus reseñas creciendo y respondidas — tu reputación trabajando</li>
+          <li>Presencia en el ecosistema completo: Bing, Apple Maps y las plataformas que nadie te dice que existen</li>
+          <li>Solo mejores prácticas oficiales — nada de trucos que pongan en riesgo tu negocio</li>
+          <li>Un activo que queda arreglado y sigue trabajando solo</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUIÉN -->
+<section class="quien wrap" id="quien">
+  <div class="flexo">
+    <div class="quien-foto">[ Foto de CJ aquí — polaroid ]</div>
+    <div>
+      <span class="eyebrow">Quiénes somos</span>
+      <h2>Operadores, no teóricos</h2>
+      <p>Detrás de MALAYA está <strong>Ciro Jaén</strong>, empresario con más de una década en turismo y hospitalidad en Panamá, y operador de marcas de experiencias en Panamá y Colombia.</p>
+      <p>MALAYA no nació como una agencia buscando clientes. Nació al revés: <strong>de estar del lado del dueño de negocio</strong> — auditando y arreglando nuestros propios sitios, con nuestro propio dinero en juego. Los resultados hablaron, y un amigo pidiendo ayuda convirtió el aprendizaje en un servicio.</p>
+      <p><strong>Nos especializamos en negocios de experiencias:</strong> tours, restaurantes, cafés, hoteles boutique, actividades — donde Google, los mapas y las reseñas deciden quién gana. Vendemos el sistema que usamos todos los días para que nos encuentren, nos crean y nos compren.</p>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section class="blog-sec" id="blog">
+  <div class="wrap">
+    <span class="eyebrow">Blog</span>
+    <h2>Aprende cómo funciona esto</h2>
+    <p class="sub">Guías escritas por operadores, sin jerga innecesaria — las mismas prácticas que aplicamos en nuestros negocios y los de nuestros clientes.</p>
+    <div class="blog-grid">
+      <a class="post-card" href="blog-negocio-no-aparece-google.html">
+        <span class="cat">Visibilidad</span>
+        <h3>¿Por qué mi negocio no aparece en Google? Las 7 razones más comunes</h3>
+        <p>Las causas casi siempre son invisibles para el dueño: perfil sin verificar, categoría equivocada, datos inconsistentes. Aquí las 7, con su arreglo.</p>
+        <span class="leer">LEER →</span>
+      </a>
+      <a class="post-card" href="blog-google-business-profile-panama.html">
+        <span class="cat">Google</span>
+        <h3>Perfil de Negocio de Google en Panamá: la guía 2026</h3>
+        <p>Crear, verificar y optimizar la ficha que te pone en el mapa: categorías, fotos, reseñas y los errores que dejan negocios invisibles.</p>
+        <span class="leer">LEER →</span>
+      </a>
+      <a class="post-card" href="blog-mas-alla-de-google.html">
+        <span class="cat">Ecosistema</span>
+        <h3>Más allá de Google: Bing, Apple Maps y las plataformas que nadie te dice</h3>
+        <p>Los usuarios de iPhone buscan en Apple Maps. La IA responde con datos de Bing. Estar solo en Google es dejar puertas cerradas.</p>
+        <span class="leer">LEER →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="final" id="contacto">
+  <div class="wrap">
+    <span class="mano">Malaya…</span>
+    <h2>Que nunca más digan "ojalá lo hubiera encontrado"</h2>
+    <a class="btn" href="/diagnostico.html">Pedir mi diagnóstico gratis</a>
+    <p class="nota">Escríbenos y te respondemos en menos de 24 horas · Panamá</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span style="display:flex;align-items:center;gap:12px"><svg width="26" height="31" viewBox="0 0 120 145" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="120" height="145" rx="10" fill="#FBF7EC"/><rect x="13" y="13" width="94" height="119" rx="5" fill="#0C2A30"/><path d="M60 38c-14 0-24 10-24 24 0 17 24 40 24 40s24-23 24-40c0-14-10-24-24-24z" fill="#E8503A"/><circle cx="60" cy="62" r="9" fill="#FBF7EC"/><path d="M13 110c16-8 31-8 47-1s32 5 47-2v20a5 5 0 0 1-5 5H18a5 5 0 0 1-5-5z" fill="#1C7A8C"/></svg>Malaya Digital · malayadigital.co · Optimización de Presencia y Visibilidad Online · Panamá © 2026</span>
+    <span>Un proyecto de <a href="#">BEYOA</a></span>
+  </div>
+</footer>
+
+<div class="airmail" role="presentation"></div>
+
+</body>
+</html>
