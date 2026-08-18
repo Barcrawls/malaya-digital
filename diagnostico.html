@@ -398,6 +398,23 @@ function mostrarResultado(){
   window.scrollTo({top:0,behavior:"smooth"});
   requestAnimationFrame(()=>{ const rb=$("rbar"); if(rb) rb.style.width=total+"%"; });
 
+  // ---- Envío automático del lead + reporte vía backend (Resend) ----
+  const desglose = Object.keys(BLOQUES).map(k => ({
+    nombre: BLOQUES[k].nombre, puntos: porBloque[k], max: BLOQUES[k].max
+  }));
+  const respuestasDetalle = PREGUNTAS.map((p,i) => ({
+    pregunta: p.q,
+    respuesta: respuestas[i] !== null ? p.o[respuestas[i]][0] : "sin responder"
+  }));
+  fetch('/api/enviar-diagnostico', {
+    method: 'POST',
+    headers: {'Content-Type':'application/json'},
+    body: JSON.stringify({
+      lead, total, banda: b.n, mayorFuga: BLOQUES[peor].nombre,
+      plan: plan.h, desglose, respuestas: respuestasDetalle
+    })
+  }).catch(err => console.error('No se pudo enviar el reporte automático:', err));
+
   $("otra").addEventListener("click",()=>{
     idx=0; respuestas.fill(null);
     resEl.hidden=true; introEl.hidden=false;
