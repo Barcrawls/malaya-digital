@@ -19,378 +19,11 @@
 <meta property="og:description" content="Optimización de presencia y visibilidad online para negocios de experiencias en Panamá. Diagnóstico gratis: descubre qué tan fácil es encontrar tu negocio hoy.">
 <meta property="og:url" content="https://malayadigital.co/">
 <meta property="og:locale" content="es_PA">
-<meta name="twitter:card" content="summary">
 <meta name="description" content="Optimización de presencia y visibilidad online para negocios de experiencias en Panamá. Diagnóstico gratis. No hacemos marketing: te ponemos en orden en internet.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 145'%3E%3Crect width='120' height='145' rx='10' fill='%2314424A'/%3E%3Crect x='13' y='13' width='94' height='119' rx='5' fill='%23FBF7EC'/%3E%3Cpath d='M60 38c-14 0-24 10-24 24 0 17 24 40 24 40s24-23 24-40c0-14-10-24-24-24z' fill='%23E8503A'/%3E%3Ccircle cx='60' cy='62' r='9' fill='%23FBF7EC'/%3E%3Cpath d='M13 110c16-8 31-8 47-1s32 5 47-2v20a5 5 0 0 1-5 5H18a5 5 0 0 1-5-5z' fill='%231C7A8C'/%3E%3C/svg%3E">
+<link rel="icon" type="image/png" href="/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Archivo:wght@400;500;600&family=Caveat:wght@600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-<style>
-:root{
-  --papel:#F6F0E2;
-  --papel-claro:#FBF7EC;
-  --tinta:#14424A;
-  --tinta-suave:#3E656C;
-  --sello:#E8503A;
-  --mar:#1C7A8C;
-  --sol:#E9A820;
-  --oscuro:#0C2A30;
-  --linea:rgba(20,66,74,.22);
-}
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  font-family:'Archivo',sans-serif;
-  background:var(--papel);
-  color:var(--tinta);
-  line-height:1.6;
-  font-size:17px;
-}
-/* Franja airmail — la firma visual */
-.airmail{
-  height:12px;
-  background:repeating-linear-gradient(-45deg,
-    var(--sello) 0 16px, var(--papel-claro) 16px 32px, var(--mar) 32px 48px, var(--papel-claro) 48px 64px);
-}
-.wrap{max-width:1100px;margin:0 auto;padding:0 24px}
-h1,h2,h3{font-family:'Bricolage Grotesque',sans-serif;line-height:1.1;letter-spacing:-.01em}
-.mano{font-family:'Caveat',cursive}
-.mono{font-family:'Space Mono',monospace}
-.eyebrow{
-  font-family:'Space Mono',monospace;font-size:.72rem;letter-spacing:.18em;
-  text-transform:uppercase;color:var(--sello);margin-bottom:14px;display:block;
-}
-section{padding:88px 0;scroll-margin-top:92px}
-a.btn,button.btn{
-  display:inline-block;background:var(--sello);color:var(--papel-claro);
-  font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:1.05rem;
-  padding:15px 32px;border-radius:6px;text-decoration:none;border:none;cursor:pointer;
-  transition:transform .15s ease, box-shadow .15s ease;
-}
-a.btn:hover,button.btn:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(232,80,58,.35)}
-a.btn.sec{background:transparent;color:var(--tinta);border:2px solid var(--tinta)}
-a.btn.sec:hover{box-shadow:0 6px 18px rgba(20,66,74,.2)}
-a:focus-visible,button:focus-visible{outline:3px solid var(--sol);outline-offset:3px}
-
-/* NAV — fija arriba, visible sin importar qué tan abajo estés */
-header.wrap{
-  position:sticky;
-  top:0;
-  z-index:200;
-  background:var(--papel);
-  box-shadow:0 2px 14px rgba(12,42,48,.10);
-}
-nav{
-  display:flex;justify-content:space-between;align-items:center;
-  padding:16px 0;
-}
-.logo{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:1.4rem;letter-spacing:.04em;text-decoration:none;color:var(--tinta);display:flex;align-items:center;gap:10px}
-.logo span{color:var(--sello)}
-nav .links{display:flex;gap:26px;align-items:center}
-nav .links a{color:var(--tinta);text-decoration:none;font-size:.92rem;font-weight:500}
-nav .links a:hover{color:var(--sello)}
-nav .links a.cta{background:var(--tinta);color:var(--papel);padding:9px 18px;border-radius:6px}
-
-/* HERO — la postal */
-.hero{padding:56px 0 96px}
-.postal{
-  background:var(--papel-claro);
-  border:1px solid var(--linea);
-  border-radius:10px;
-  box-shadow:0 14px 44px rgba(12,42,48,.14);
-  padding:8px;
-  transform:rotate(-.6deg);
-}
-.postal-inner{
-  border:2px solid var(--linea);
-  border-radius:6px;
-  display:grid;
-  grid-template-columns:1.25fr 1fr;
-}
-.postal-msg{padding:46px 42px;border-right:2px dashed var(--linea)}
-.postal-msg .mano{font-size:2rem;color:var(--mar);display:block;margin-bottom:10px}
-.postal-msg h1{font-size:clamp(2.3rem,5.2vw,3.7rem);font-weight:800;margin-bottom:20px}
-.postal-msg h1 em{font-style:normal;color:var(--sello)}
-.postal-msg p{font-size:1.1rem;color:var(--tinta-suave);max-width:34ch;margin-bottom:30px}
-.postal-dir{padding:38px 34px;display:flex;flex-direction:column;justify-content:space-between}
-.estampilla{
-  align-self:flex-end;width:96px;height:116px;
-  background:var(--mar);color:var(--papel-claro);
-  border:6px solid var(--papel-claro);
-  outline:2px dashed var(--linea);
-  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;
-  transform:rotate(3deg);text-align:center;padding:8px;
-}
-.estampilla .mono{font-size:.6rem;letter-spacing:.1em}
-.estampilla strong{font-family:'Bricolage Grotesque',sans-serif;font-size:1.6rem;line-height:1}
-.matasellos{
-  position:relative;align-self:flex-end;margin:-86px 96px 0 0;
-  width:92px;height:92px;border:2px solid var(--tinta-suave);border-radius:50%;
-  display:flex;align-items:center;justify-content:center;text-align:center;
-  font-family:'Space Mono',monospace;font-size:.58rem;letter-spacing:.08em;
-  color:var(--tinta-suave);transform:rotate(-8deg);opacity:.75;
-}
-.dir-lineas{margin-top:auto}
-.dir-lineas p{
-  border-bottom:2px solid var(--linea);
-  font-family:'Caveat',cursive;font-size:1.35rem;color:var(--tinta-suave);
-  padding:8px 2px 2px;
-}
-/* HAMBURGUESA — solo visible en mobile */
-.hamburger{
-  display:none;
-  flex-direction:column;justify-content:center;gap:5px;
-  width:38px;height:38px;background:none;border:none;cursor:pointer;
-  padding:0;
-}
-.hamburger span{
-  display:block;width:24px;height:2px;background:var(--tinta);border-radius:2px;
-  transition:transform .25s ease, opacity .25s ease;
-}
-.hamburger.abierto span:nth-child(1){transform:translateY(7px) rotate(45deg)}
-.hamburger.abierto span:nth-child(2){opacity:0}
-.hamburger.abierto span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-
-@media(max-width:720px){
-  .hamburger{display:flex}
-  .logo{font-size:1.2rem}
-  nav .links{
-    position:fixed;top:0;left:0;right:0;bottom:0;
-    background:var(--papel);
-    display:flex;flex-direction:column;align-items:center;justify-content:center;
-    gap:28px;
-    transform:translateX(100%);
-    transition:transform .3s ease;
-    z-index:150;
-  }
-  nav .links.abierto{transform:translateX(0)}
-  nav .links a{font-size:1.3rem}
-  nav .links a.cta{padding:14px 30px;font-size:1.05rem}
-}
-
-@media(max-width:820px){
-  .postal-inner{grid-template-columns:1fr}
-  .postal-msg{border-right:none;border-bottom:2px dashed var(--linea);padding:34px 26px}
-  .postal-dir{padding:26px}
-  .matasellos{margin:-78px 78px 0 0}
-}
-
-/* CARTA — historia de origen */
-.carta-sec{background:var(--papel)}
-.carta{
-  max-width:760px;margin:0 auto;background:var(--papel-claro);
-  border:1px solid var(--linea);border-radius:8px;padding:52px 56px;
-  box-shadow:0 12px 36px rgba(12,42,48,.1);transform:rotate(.4deg);position:relative;
-}
-.carta::before{
-  content:"POR QUÉ EXISTE ESTO";position:absolute;top:-12px;left:40px;
-  background:var(--sol);color:var(--oscuro);
-  font-family:'Space Mono',monospace;font-size:.66rem;letter-spacing:.14em;
-  padding:5px 14px;border-radius:20px;
-}
-.carta .saludo{font-family:'Caveat',cursive;font-size:1.7rem;color:var(--mar);margin-bottom:18px}
-.carta p{margin-bottom:16px;color:var(--tinta)}
-.carta p.destaca{
-  border-left:3px solid var(--sello);padding-left:18px;
-  font-weight:600;color:var(--tinta);
-}
-.carta .firma{font-family:'Caveat',cursive;font-size:1.5rem;color:var(--tinta-suave);margin-top:26px;text-align:right}
-@media(max-width:720px){.carta{padding:36px 26px}}
-
-/* QUÉ ES / QUÉ NO ES */
-.no-mkt{background:var(--oscuro);color:var(--papel)}
-.no-mkt h2{font-size:clamp(1.9rem,4vw,2.7rem);max-width:22ch;margin-bottom:44px}
-.no-mkt h2 em{font-style:normal;color:var(--sol)}
-.dos-cols{display:grid;grid-template-columns:1fr 1fr;gap:40px}
-.col-card{border:1px solid rgba(246,240,226,.25);border-radius:10px;padding:32px}
-.col-card h3{font-size:1.15rem;margin-bottom:18px;display:flex;align-items:center;gap:10px}
-.col-card ul{list-style:none}
-.col-card li{padding:9px 0;border-bottom:1px solid rgba(246,240,226,.12);color:rgba(246,240,226,.85);font-size:.98rem}
-.col-card li:last-child{border-bottom:none}
-.tag-no{color:var(--sello)}
-.tag-si{color:var(--sol)}
-@media(max-width:720px){.dos-cols{grid-template-columns:1fr}}
-
-/* DIAGNÓSTICO */
-.diag{background:var(--papel-claro);border-top:1px solid var(--linea);border-bottom:1px solid var(--linea)}
-.diag .flexo{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
-.diag h2{font-size:clamp(1.9rem,4vw,2.6rem);margin-bottom:18px}
-.diag p.lead{color:var(--tinta-suave);margin-bottom:26px}
-.score-card{
-  background:var(--papel-claro);border:1px solid var(--linea);border-radius:12px;
-  padding:34px;box-shadow:0 10px 30px rgba(12,42,48,.1);transform:rotate(.8deg);
-}
-.score-num{font-family:'Space Mono',monospace;font-size:4rem;font-weight:700;color:var(--sello);line-height:1}
-.score-num small{font-size:1.4rem;color:var(--tinta-suave)}
-.score-bar{height:10px;background:rgba(20,66,74,.12);border-radius:6px;margin:18px 0 26px;overflow:hidden}
-.score-bar div{height:100%;width:42%;background:linear-gradient(90deg,var(--sello),var(--sol));border-radius:6px}
-.score-item{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px dashed var(--linea);font-size:.95rem}
-.score-item:last-child{border-bottom:none}
-.score-item .mono{font-size:.8rem}
-.ok{color:var(--mar);font-weight:600}
-.mal{color:var(--sello);font-weight:600}
-@media(max-width:820px){.diag .flexo{grid-template-columns:1fr}}
-
-/* OFERTAS */
-.ofertas{background:var(--papel-claro)}
-.ofertas h2{font-size:clamp(1.9rem,4vw,2.6rem);margin-bottom:12px}
-.ofertas .sub{color:var(--tinta-suave);max-width:56ch;margin-bottom:52px}
-.sprint{
-  border:2px solid var(--tinta);border-radius:12px;padding:34px;
-  display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center;margin-bottom:56px;
-  background:var(--papel);
-}
-.sprint h3{font-size:1.4rem;margin-bottom:8px}
-.sprint p{color:var(--tinta-suave);font-size:.98rem;max-width:60ch}
-.sprint .precio{font-family:'Space Mono',monospace;font-size:2rem;font-weight:700;white-space:nowrap}
-.sprint .precio small{display:block;font-size:.72rem;color:var(--tinta-suave);font-weight:400;text-align:right}
-@media(max-width:720px){.sprint{grid-template-columns:1fr}}
-.planes{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.plan{
-  background:var(--papel);border:1px solid var(--linea);border-radius:12px;padding:32px 28px;
-  display:flex;flex-direction:column;transition:transform .18s ease, box-shadow .18s ease;
-}
-.plan:hover{transform:translateY(-5px);box-shadow:0 14px 34px rgba(12,42,48,.13)}
-.plan.destacado{border:2px solid var(--sello);position:relative}
-.plan.destacado::before{
-  content:"El más elegido";position:absolute;top:-13px;left:26px;
-  background:var(--sello);color:var(--papel-claro);
-  font-family:'Space Mono',monospace;font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;
-  padding:4px 12px;border-radius:20px;
-}
-.plan h3{font-size:1.35rem}
-.plan .para{font-size:.85rem;color:var(--tinta-suave);margin:6px 0 18px;min-height:42px}
-.plan .precio{font-family:'Space Mono',monospace;font-size:2.1rem;font-weight:700}
-.plan .precio small{font-size:.85rem;color:var(--tinta-suave);font-weight:400}
-.plan .setup{font-size:.75rem;color:var(--tinta-suave);margin-bottom:20px;font-family:'Space Mono',monospace}
-.plan ul{list-style:none;flex-grow:1;margin-bottom:24px}
-.plan li{padding:8px 0 8px 26px;position:relative;font-size:.92rem;border-bottom:1px dashed var(--linea)}
-.plan li:last-child{border-bottom:none}
-.plan li::before{content:"✦";position:absolute;left:2px;color:var(--sol);font-size:.8rem}
-.plan a.btn{text-align:center}
-@media(max-width:900px){.planes{grid-template-columns:1fr}}
-
-/* CASO DE ESTUDIO */
-.caso .eyebrow{color:var(--mar)}
-.caso h2{font-size:clamp(1.9rem,4vw,2.6rem);margin-bottom:12px}
-.caso .sub{color:var(--tinta-suave);max-width:60ch;margin-bottom:48px}
-.caso-card{
-  background:var(--oscuro);color:var(--papel);border-radius:14px;overflow:hidden;
-  box-shadow:0 18px 50px rgba(12,42,48,.25);
-}
-.caso-head{
-  padding:38px 42px;border-bottom:1px solid rgba(246,240,226,.15);
-  display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;
-}
-.caso-head h3{font-size:1.7rem}
-.caso-head .mono{font-size:.78rem;color:var(--sol);letter-spacing:.1em}
-.caso-stats{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid rgba(246,240,226,.15)}
-.stat{padding:32px 24px;border-right:1px solid rgba(246,240,226,.15)}
-.stat:last-child{border-right:none}
-.stat .num{font-family:'Space Mono',monospace;font-size:2rem;font-weight:700;color:var(--sol)}
-.stat .lbl{font-size:.8rem;color:rgba(246,240,226,.7);margin-top:6px;line-height:1.4}
-.caso-body{padding:36px 42px;display:grid;grid-template-columns:1fr 1fr;gap:36px}
-.caso-body h4{font-family:'Bricolage Grotesque',sans-serif;font-size:1rem;color:var(--sol);margin-bottom:12px}
-.caso-body ul{list-style:none}
-.caso-body li{padding:7px 0;font-size:.93rem;color:rgba(246,240,226,.85);border-bottom:1px solid rgba(246,240,226,.1)}
-.caso-body li:last-child{border-bottom:none}
-.caso-foot{padding:24px 42px;background:rgba(246,240,226,.06)}
-.caso-foot p{font-family:'Caveat',cursive;font-size:1.4rem;color:var(--sol)}
-/* Caso completo expandible */
-.caso-geek{border-top:1px solid rgba(246,240,226,.15)}
-.caso-geek summary{
-  padding:20px 42px;cursor:pointer;list-style:none;
-  font-family:'Space Mono',monospace;font-size:.8rem;letter-spacing:.1em;
-  color:var(--sol);display:flex;align-items:center;gap:10px;
-  transition:background .15s ease;
-}
-.caso-geek summary::-webkit-details-marker{display:none}
-.caso-geek summary:hover{background:rgba(246,240,226,.05)}
-.caso-geek summary::after{content:"+";font-size:1.1rem;margin-left:auto}
-.caso-geek[open] summary::after{content:"−"}
-.geek-body{padding:10px 42px 42px}
-.geek-body h5{
-  font-family:'Space Mono',monospace;font-size:.72rem;letter-spacing:.14em;
-  text-transform:uppercase;color:var(--sol);margin:30px 0 14px;
-}
-.geek-body h5:first-child{margin-top:0}
-.geek-tabla{width:100%;border-collapse:collapse;font-size:.85rem}
-.geek-tabla th{
-  font-family:'Space Mono',monospace;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
-  color:rgba(246,240,226,.6);text-align:left;padding:10px 12px;
-  border-bottom:1px solid rgba(246,240,226,.25);
-}
-.geek-tabla td{
-  padding:11px 12px;border-bottom:1px solid rgba(246,240,226,.1);
-  color:rgba(246,240,226,.88);
-}
-.geek-tabla td.cambio{font-family:'Space Mono',monospace;color:var(--sol);font-weight:700;white-space:nowrap}
-.geek-tabla tr:last-child td{border-bottom:none}
-.geek-cols{display:grid;grid-template-columns:1fr 1fr;gap:32px}
-.geek-body ul{list-style:none}
-.geek-body li{padding:7px 0 7px 20px;position:relative;font-size:.88rem;color:rgba(246,240,226,.82);border-bottom:1px solid rgba(246,240,226,.08)}
-.geek-body li::before{content:"›";position:absolute;left:2px;color:var(--sol)}
-.geek-body li:last-child{border-bottom:none}
-.geek-nota{margin-top:26px;font-size:.75rem;color:rgba(246,240,226,.5);font-family:'Space Mono',monospace}
-@media(max-width:820px){
-  .caso-geek summary{padding:18px 28px}
-  .geek-body{padding:10px 28px 32px}
-  .geek-cols{grid-template-columns:1fr}
-  .geek-tabla{font-size:.78rem}
-  .geek-tabla th,.geek-tabla td{padding:8px 8px}
-}
-@media(max-width:820px){
-  .caso-stats{grid-template-columns:1fr 1fr}
-  .stat:nth-child(2){border-right:none}
-  .caso-body{grid-template-columns:1fr;padding:28px}
-  .caso-head{padding:28px}
-}
-
-/* QUIÉN */
-.quien .flexo{display:grid;grid-template-columns:auto 1fr;gap:48px;align-items:start}
-.quien-foto{
-  width:200px;height:240px;background:var(--mar);border-radius:8px;
-  border:8px solid var(--papel-claro);box-shadow:0 12px 30px rgba(12,42,48,.18);
-  transform:rotate(-2deg);display:flex;align-items:center;justify-content:center;
-  color:var(--papel-claro);font-family:'Caveat',cursive;font-size:1.3rem;text-align:center;padding:16px;
-}
-.quien h2{font-size:clamp(1.7rem,3.5vw,2.3rem);margin-bottom:18px}
-.quien p{color:var(--tinta-suave);max-width:62ch;margin-bottom:14px}
-.quien strong{color:var(--tinta)}
-@media(max-width:720px){.quien .flexo{grid-template-columns:1fr}.quien-foto{margin:0 auto}}
-
-/* CTA FINAL */
-.final{background:var(--sello);color:var(--papel-claro);text-align:center}
-.final .mano{font-size:2.2rem;display:block;margin-bottom:8px;opacity:.9}
-.final h2{font-size:clamp(2rem,4.5vw,3rem);max-width:22ch;margin:0 auto 26px}
-.final a.btn{background:var(--papel-claro);color:var(--sello)}
-.final .nota{margin-top:18px;font-size:.85rem;opacity:.85}
-
-/* BLOG */
-.blog-sec{background:var(--papel-claro);border-top:1px solid var(--linea)}
-.blog-sec h2{font-size:clamp(1.9rem,4vw,2.6rem);margin-bottom:12px}
-.blog-sec .sub{color:var(--tinta-suave);max-width:56ch;margin-bottom:44px}
-.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.post-card{
-  background:var(--papel);border:1px solid var(--linea);border-radius:12px;padding:30px 28px;
-  display:flex;flex-direction:column;text-decoration:none;color:var(--tinta);
-  transition:transform .18s ease, box-shadow .18s ease;
-}
-.post-card:hover{transform:translateY(-5px);box-shadow:0 14px 34px rgba(12,42,48,.13)}
-.post-card .cat{font-family:'Space Mono',monospace;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--sello);margin-bottom:12px}
-.post-card h3{font-family:'Bricolage Grotesque',sans-serif;font-size:1.15rem;line-height:1.3;margin-bottom:12px}
-.post-card p{font-size:.9rem;color:var(--tinta-suave);flex-grow:1;margin-bottom:18px}
-.post-card .leer{font-family:'Space Mono',monospace;font-size:.75rem;letter-spacing:.1em;color:var(--mar);font-weight:700}
-@media(max-width:900px){.blog-grid{grid-template-columns:1fr}}
-
-footer{background:var(--oscuro);color:rgba(246,240,226,.7);padding:36px 0;font-size:.85rem}
-footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
-footer a{color:var(--sol);text-decoration:none}
-
-@media (prefers-reduced-motion: reduce){
-  *{transition:none!important;scroll-behavior:auto!important}
-}
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -398,7 +31,7 @@ footer a{color:var(--sol);text-decoration:none}
   "name": "Malaya Digital",
   "alternateName": "MALAYA",
   "url": "https://malayadigital.co",
-  "logo": "https://malayadigital.co/favicon.ico",
+  "logo": "https://malayadigital.co/favicon.png",
   "email": "hola@malayadigital.co",
   "telephone": "+50767471203",
   "description": "Optimización de presencia y visibilidad online para negocios en Panamá — Google Business Profile, reseñas, sitio web y presencia en plataformas.",
@@ -410,14 +43,236 @@ footer a{color:var(--sol);text-decoration:none}
   "sameAs": []
 }
 </script>
+<style>
+:root{
+  --ink:#16233B;
+  --ink-soft:#3E5065;
+  --paper:#ECEEE7;
+  --paper2:#F4F5F0;
+  --line:rgba(22,35,59,.20);
+  --signal:#FF5A36;
+  --accent:#5C7A6B;
+  --amber:#E9A820;
+  --dark:#101B2D;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Space Grotesk',sans-serif;background:var(--paper);color:var(--ink);line-height:1.6;font-size:17px}
+.wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+h1,h2,h3{line-height:1.12;letter-spacing:-.015em;font-weight:700}
+.mono{font-family:'IBM Plex Mono',monospace}
+.eyebrow{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--signal);margin-bottom:14px;display:block}
+section{padding:88px 0;scroll-margin-top:92px}
+a.btn,button.btn{
+  display:inline-block;background:var(--ink);color:var(--paper);
+  font-weight:600;font-size:1rem;padding:15px 32px;border-radius:3px;
+  text-decoration:none;border:none;cursor:pointer;
+  transition:transform .15s ease, box-shadow .15s ease;
+}
+a.btn:hover,button.btn:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(22,35,59,.28)}
+a.btn.naranja{background:var(--signal);color:#fff}
+a.btn.naranja:hover{box-shadow:0 6px 18px rgba(255,90,54,.35)}
+a.btn.sec{background:transparent;color:var(--ink);border:2px solid var(--ink)}
+a.btn.sec:hover{box-shadow:0 6px 18px rgba(22,35,59,.18)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+
+/* NAV — fija arriba */
+header.wrap{position:sticky;top:0;z-index:200;background:var(--paper);box-shadow:0 2px 14px rgba(16,27,45,.10)}
+nav{display:flex;justify-content:space-between;align-items:center;padding:14px 0}
+.logo{display:flex;align-items:center;gap:10px;font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:1.05rem;letter-spacing:.03em;text-decoration:none;color:var(--ink)}
+.logo img{height:32px;width:auto;display:block}
+nav .links{display:flex;gap:28px;align-items:center;font-family:'IBM Plex Mono',monospace;font-size:.8rem;letter-spacing:.04em}
+nav .links a{color:var(--ink);text-decoration:none}
+nav .links a:hover{color:var(--signal)}
+nav .links a.cta{background:var(--signal);color:#fff;padding:10px 18px;border-radius:3px}
+nav .links a.cta:hover{color:#fff}
+
+/* HAMBURGUESA */
+.hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;width:38px;height:38px;background:none;border:none;cursor:pointer;padding:0}
+.hamburger span{display:block;width:24px;height:2px;background:var(--ink);border-radius:2px;transition:transform .25s ease,opacity .25s ease}
+.hamburger.abierto span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.abierto span:nth-child(2){opacity:0}
+.hamburger.abierto span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+@media(max-width:720px){
+  .hamburger{display:flex}
+  nav .links{position:fixed;top:0;left:0;right:0;bottom:0;background:var(--paper);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:28px;transform:translateX(100%);transition:transform .3s ease;z-index:150}
+  nav .links.abierto{transform:translateX(0)}
+  nav .links a{font-size:1.15rem}
+  nav .links a.cta{padding:14px 30px;font-size:.95rem}
+}
+
+/* HERO — el mapa */
+.hero{padding:88px 0 96px;position:relative;overflow:hidden;scroll-margin-top:0}
+.hero .mapa-svg{position:absolute;inset:-40px -10% -40px -10%;width:120%;height:calc(100% + 80px);z-index:0;pointer-events:none}
+.hero .contorno{fill:none;stroke:var(--accent);stroke-width:.9}
+.hero .contornos .contorno{opacity:.38}
+.hero .contornos-sec .contorno{opacity:.26;stroke:var(--ink)}
+.hero .contornos-ter .contorno{opacity:.22;stroke:var(--ink)}
+.hero .ruta{fill:none;stroke:var(--signal);stroke-width:1.2;stroke-dasharray:2 5;opacity:.55}
+.hero .pin-dot{fill:var(--signal);opacity:.85}
+.hero .etiqueta{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.06em;fill:var(--ink);opacity:.4}
+.hero .contenido{position:relative;z-index:2}
+.coord{font-family:'IBM Plex Mono',monospace;font-size:.78rem;letter-spacing:.1em;color:var(--accent);margin-bottom:22px;display:flex;align-items:center;gap:10px}
+.coord::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--signal);display:inline-block;box-shadow:0 0 0 4px rgba(255,90,54,.18)}
+.hero h1{font-size:clamp(2.4rem,6vw,4.2rem);max-width:13ch;margin-bottom:26px}
+.hero h1 em{color:var(--signal);font-style:normal}
+.hero .sub{font-size:1.1rem;color:var(--ink-soft);max-width:44ch;margin-bottom:38px}
+.hero .btns{display:flex;gap:18px;align-items:center;margin-bottom:70px;flex-wrap:wrap}
+.hero .btn-s{color:var(--ink);text-decoration:none;font-family:'IBM Plex Mono',monospace;font-size:.85rem;border-bottom:1px solid var(--ink);padding-bottom:2px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.grid3 .cel{background:var(--paper);padding:26px 24px}
+.grid3 .n{font-family:'IBM Plex Mono',monospace;font-size:.7rem;color:var(--accent);letter-spacing:.1em;margin-bottom:10px;display:block}
+.grid3 .v{font-family:'IBM Plex Mono',monospace;font-size:2rem;font-weight:600}
+.grid3 .v small{font-size:1rem;color:var(--ink-soft)}
+.grid3 .d{font-size:.85rem;color:var(--ink-soft);margin-top:6px}
+@media(max-width:720px){.grid3{grid-template-columns:1fr}}
+
+/* DIAGNÓSTICO */
+.diag{background:var(--paper2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.diag .flexo{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+.diag h2{font-size:clamp(1.9rem,4vw,2.6rem);margin-bottom:16px}
+.diag .lead{color:var(--ink-soft);margin-bottom:30px}
+@media(max-width:820px){.diag .flexo{grid-template-columns:1fr}}
+.score-card{background:var(--dark);color:var(--paper);border:1px solid var(--line);border-radius:6px;padding:30px 28px;box-shadow:0 16px 40px rgba(16,27,45,.22)}
+.score-num{font-family:'IBM Plex Mono',monospace;font-size:3.6rem;font-weight:600;line-height:1;color:var(--amber);margin:10px 0 8px}
+.score-num small{font-size:1.3rem;color:rgba(236,238,231,.55)}
+.score-bar{height:9px;background:rgba(236,238,231,.15);border-radius:5px;overflow:hidden;margin-bottom:22px}
+.score-bar div{height:100%;width:42%;background:var(--amber);border-radius:5px}
+.score-item{display:flex;justify-content:space-between;gap:14px;padding:9px 0;border-bottom:1px dashed rgba(236,238,231,.18);font-size:.9rem}
+.score-item .mal{color:var(--signal);font-size:.7rem;letter-spacing:.08em}
+.score-item .ok{color:#7fc79e;font-size:.7rem;letter-spacing:.08em}
+
+/* CASO */
+.caso h2{font-size:clamp(1.9rem,4vw,2.6rem);margin-bottom:12px}
+.caso .sub{color:var(--ink-soft);max-width:60ch;margin-bottom:44px}
+.caso-card{border:1px solid var(--line);border-radius:6px;background:var(--paper2);overflow:hidden}
+.caso-head{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;padding:28px 32px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.caso-head .mono{font-size:.68rem;letter-spacing:.12em;color:var(--ink-soft)}
+.caso-head h3{font-size:1.6rem;margin-top:6px}
+.caso-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line)}
+.caso-stats .stat{background:var(--paper2);padding:24px}
+.caso-stats .num{font-family:'IBM Plex Mono',monospace;font-size:1.9rem;font-weight:600;color:var(--signal)}
+.caso-stats .lbl{font-size:.82rem;color:var(--ink-soft);margin-top:6px}
+@media(max-width:820px){.caso-stats{grid-template-columns:repeat(2,1fr)}}
+.caso-body{display:grid;grid-template-columns:1fr 1fr;gap:40px;padding:32px}
+.caso-body h4{font-family:'IBM Plex Mono',monospace;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
+.caso-body ul{list-style:none}
+.caso-body li{padding:7px 0 7px 22px;position:relative;font-size:.94rem;color:var(--ink-soft)}
+.caso-body li::before{content:"—";position:absolute;left:0;color:var(--signal)}
+@media(max-width:720px){.caso-body{grid-template-columns:1fr}}
+.caso-geek{border-top:1px solid var(--line)}
+.caso-geek summary{font-family:'IBM Plex Mono',monospace;font-size:.75rem;letter-spacing:.14em;padding:18px 32px;cursor:pointer;color:var(--accent);list-style:none}
+.caso-geek summary::-webkit-details-marker{display:none}
+.caso-geek summary::before{content:"▸ "}
+.caso-geek[open] summary::before{content:"▾ "}
+.geek-body{padding:8px 32px 32px}
+.geek-body h5{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);margin:26px 0 12px}
+.geek-tabla{width:100%;border-collapse:collapse;font-size:.85rem}
+.geek-tabla th{font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.1em;text-align:left;padding:8px 10px;border-bottom:2px solid var(--ink);color:var(--ink-soft)}
+.geek-tabla td{padding:8px 10px;border-bottom:1px solid var(--line);color:var(--ink-soft)}
+.geek-tabla .cambio{color:var(--signal);font-family:'IBM Plex Mono',monospace;font-size:.78rem}
+.geek-cols{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.geek-cols ul,.geek-body > ul{list-style:none}
+.geek-cols li,.geek-body > ul li{padding:5px 0 5px 20px;position:relative;font-size:.88rem;color:var(--ink-soft)}
+.geek-cols li::before,.geek-body > ul li::before{content:"—";position:absolute;left:0;color:var(--accent)}
+@media(max-width:720px){.geek-cols{grid-template-columns:1fr}.geek-tabla{font-size:.75rem}}
+.geek-nota{font-family:'IBM Plex Mono',monospace;font-size:.68rem;color:var(--ink-soft);margin-top:20px}
+.caso-foot{padding:22px 32px;border-top:1px solid var(--line);text-align:center}
+.caso-foot p{font-family:'IBM Plex Mono',monospace;font-size:.9rem;color:var(--accent)}
+
+/* OFERTAS */
+.ofertas{background:var(--dark);color:var(--paper)}
+.ofertas h2{font-size:clamp(1.9rem,4vw,2.6rem);margin-bottom:12px}
+.ofertas .sub{color:rgba(236,238,231,.7);max-width:60ch;margin-bottom:44px}
+.sprint{display:grid;grid-template-columns:1.4fr .6fr;gap:32px;align-items:center;background:rgba(236,238,231,.05);border:1px solid rgba(236,238,231,.16);border-radius:6px;padding:32px;margin-bottom:28px}
+.sprint h3{font-size:1.5rem;margin:8px 0 10px}
+.sprint p{color:rgba(236,238,231,.75);font-size:.95rem}
+.sprint .precio{text-align:right}
+@media(max-width:720px){.sprint{grid-template-columns:1fr}.sprint .precio{text-align:left}}
+.precio{font-family:'IBM Plex Mono',monospace;font-size:2.1rem;font-weight:600}
+.precio small{display:block;font-size:.75rem;color:rgba(236,238,231,.55);font-weight:400}
+.planes{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+@media(max-width:900px){.planes{grid-template-columns:1fr}}
+.plan{background:rgba(236,238,231,.04);border:1px solid rgba(236,238,231,.16);border-radius:6px;padding:30px 26px;display:flex;flex-direction:column}
+.plan.destacado{background:rgba(255,90,54,.08);border-color:var(--signal);position:relative}
+.plan.destacado::before{content:"EL MÁS ELEGIDO";position:absolute;top:-11px;left:24px;background:var(--signal);color:#fff;font-family:'IBM Plex Mono',monospace;font-size:.62rem;letter-spacing:.12em;padding:4px 12px;border-radius:3px}
+.plan h3{font-size:1.35rem;margin-bottom:8px}
+.plan .para{color:rgba(236,238,231,.65);font-size:.88rem;margin-bottom:16px;min-height:44px}
+.plan .precio{font-size:1.9rem;margin-bottom:4px}
+.plan .setup{font-family:'IBM Plex Mono',monospace;font-size:.62rem;letter-spacing:.1em;color:rgba(236,238,231,.5);margin-bottom:18px}
+.plan ul{list-style:none;flex-grow:1;margin-bottom:24px}
+.plan li{padding:6px 0 6px 20px;position:relative;font-size:.88rem;color:rgba(236,238,231,.78)}
+.plan li::before{content:"—";position:absolute;left:0;color:var(--signal)}
+.plan .btn{text-align:center}
+.plan .btn.sec{color:var(--paper);border-color:rgba(236,238,231,.4)}
+
+/* CARTA / BITÁCORA */
+.carta-sec{background:var(--paper)}
+.carta{max-width:760px;margin:0 auto;background:var(--paper2);border:1px solid var(--line);border-radius:6px;padding:52px 56px;position:relative}
+.carta::before{content:"BITÁCORA · CÓMO LLEGAMOS AQUÍ";position:absolute;top:-11px;left:32px;background:var(--paper);border:1px solid var(--line);font-family:'IBM Plex Mono',monospace;font-size:.62rem;letter-spacing:.14em;padding:4px 12px;color:var(--accent)}
+.carta p{margin-bottom:18px;color:var(--ink-soft)}
+.carta .saludo{font-family:'IBM Plex Mono',monospace;color:var(--accent);font-size:.85rem;letter-spacing:.06em}
+.carta em{color:var(--ink);font-style:normal;font-weight:600}
+.carta .destaca{color:var(--ink);font-weight:600;border-left:3px solid var(--signal);padding-left:18px}
+.carta .firma{font-family:'IBM Plex Mono',monospace;font-size:.85rem;color:var(--ink);margin-bottom:0}
+@media(max-width:720px){.carta{padding:36px 26px}}
+
+/* NO-MKT */
+.no-mkt h2{font-size:clamp(1.9rem,4vw,2.6rem);margin-bottom:36px}
+.no-mkt h2 em{color:var(--signal);font-style:normal}
+.dos-cols{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+@media(max-width:720px){.dos-cols{grid-template-columns:1fr}}
+.col-card{border:1px solid var(--line);border-radius:6px;padding:30px 28px;background:var(--paper2)}
+.col-card h3{font-size:1.1rem;margin-bottom:18px;display:flex;align-items:center;gap:10px}
+.tag-no{color:var(--signal)}
+.tag-si{color:var(--accent)}
+.col-card ul{list-style:none}
+.col-card li{padding:7px 0 7px 22px;position:relative;font-size:.92rem;color:var(--ink-soft)}
+.col-card li::before{content:"—";position:absolute;left:0;color:var(--line)}
+
+/* QUIÉN */
+.quien .flexo{display:grid;grid-template-columns:.65fr 1.35fr;gap:52px;align-items:center}
+@media(max-width:720px){.quien .flexo{grid-template-columns:1fr}.quien-foto{margin:0 auto}}
+.quien-foto{background:var(--paper2);border:1px solid var(--line);border-radius:6px;aspect-ratio:4/5;display:flex;align-items:center;justify-content:center;color:var(--ink-soft);font-family:'IBM Plex Mono',monospace;font-size:.75rem;max-width:300px;width:100%}
+.quien h2{font-size:clamp(1.8rem,3.6vw,2.4rem);margin-bottom:18px}
+.quien p{color:var(--ink-soft);margin-bottom:14px}
+.quien strong{color:var(--ink)}
+
+/* BLOG */
+.blog-sec{background:var(--paper2);border-top:1px solid var(--line)}
+.blog-sec h2{font-size:clamp(1.9rem,4vw,2.6rem);margin-bottom:12px}
+.blog-sec .sub{color:var(--ink-soft);max-width:56ch;margin-bottom:44px}
+.blog-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+@media(max-width:900px){.blog-grid{grid-template-columns:1fr}}
+.post-card{display:block;background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:28px 26px;text-decoration:none;color:var(--ink);transition:transform .15s ease,box-shadow .15s ease}
+.post-card:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(22,35,59,.12)}
+.post-card .cat{font-family:'IBM Plex Mono',monospace;font-size:.65rem;letter-spacing:.14em;text-transform:uppercase;color:var(--signal)}
+.post-card h3{font-size:1.12rem;margin:12px 0 10px;line-height:1.3}
+.post-card p{font-size:.88rem;color:var(--ink-soft);margin-bottom:16px}
+.post-card .leer{font-family:'IBM Plex Mono',monospace;font-size:.7rem;letter-spacing:.12em;color:var(--accent)}
+
+/* FINAL */
+.final{background:var(--dark);color:var(--paper);text-align:center}
+.final .mono-linea{font-family:'IBM Plex Mono',monospace;color:var(--signal);font-size:.85rem;letter-spacing:.14em;display:block;margin-bottom:14px}
+.final h2{font-size:clamp(1.8rem,4vw,2.5rem);max-width:22ch;margin:0 auto 30px}
+.final .nota{font-family:'IBM Plex Mono',monospace;font-size:.72rem;color:rgba(236,238,231,.55);margin-top:20px}
+
+footer{padding:26px 0;font-size:.78rem;color:var(--ink-soft);border-top:1px solid var(--line)}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+footer a{color:var(--accent)}
+footer img{height:22px;width:auto;vertical-align:middle}
+
+@media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+</style>
 </head>
 <body>
 
-<div class="airmail" role="presentation"></div>
-
 <header class="wrap">
   <nav>
-    <a class="logo" href="#" aria-label="MALAYA — inicio"><svg width="34" height="41" viewBox="0 0 120 145" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="120" height="145" rx="10" fill="#14424A"/><rect x="13" y="13" width="94" height="119" rx="5" fill="#FBF7EC"/><path d="M60 38c-14 0-24 10-24 24 0 17 24 40 24 40s24-23 24-40c0-14-10-24-24-24z" fill="#E8503A"/><circle cx="60" cy="62" r="9" fill="#FBF7EC"/><path d="M13 110c16-8 31-8 47-1s32 5 47-2v20a5 5 0 0 1-5 5H18a5 5 0 0 1-5-5z" fill="#1C7A8C"/></svg>MALAYA<span>.</span></a>
+    <a class="logo" href="#" aria-label="MALAYA — inicio">
+      <img src="/logo-malaya.png" alt="">
+      MALAYA
+    </a>
     <div class="links" id="navLinks">
       <a href="#ofertas">Servicios</a>
       <a href="#caso">Resultados</a>
@@ -431,25 +286,51 @@ footer a{color:var(--sol);text-decoration:none}
   </nav>
 </header>
 
-
-<!-- HERO: la postal -->
-<section class="hero wrap">
-  <div class="postal">
-    <div class="postal-inner">
-      <div class="postal-msg">
-        <span class="mano">¡Malaya! Ojalá estuvieras aquí…</span>
-        <h1>Tus clientes te están buscando. <em>Que te encuentren.</em></h1>
-        <p>Ponemos tu negocio en orden en todo internet: Google, Bing, Apple Maps, reseñas y tu sitio web. Para que aparezca, convenza y venda.</p>
-        <a class="btn" href="/diagnostico.html">Hacer mi diagnóstico gratis</a>
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap" style="position:relative">
+    <svg class="mapa-svg" viewBox="0 0 1000 560" preserveAspectRatio="xMidYMid slice">
+      <g transform="translate(0,-130)">
+      <g class="contornos">
+        <path class="contorno" d="M 540.0,330.0 C 543.1,332.1 547.2,335.2 548.3,337.9 C 549.4,340.6 548.6,344.1 546.6,346.2 C 544.6,348.3 539.8,349.8 536.0,350.7 C 532.2,351.6 527.6,351.3 524.1,351.7 C 520.6,352.1 517.9,352.2 515.2,352.8 C 512.5,353.4 510.5,354.6 508.0,355.2 C 505.5,355.8 502.7,356.6 500.0,356.6 C 497.3,356.6 494.5,355.8 492.0,355.2 C 489.5,354.6 487.5,353.4 484.8,352.8 C 482.1,352.2 479.4,352.1 475.9,351.7 C 472.4,351.3 467.8,351.6 464.0,350.7 C 460.2,349.8 455.4,348.3 453.4,346.2 C 451.3,344.1 450.6,340.6 451.7,337.9 C 452.8,335.2 456.9,332.1 460.0,330.0 C 463.1,327.9 467.9,326.6 470.3,325.1 C 472.7,323.6 474.0,322.9 474.5,321.2 C 475.0,319.5 473.6,317.2 473.5,314.8 C 473.4,312.4 473.0,309.0 474.2,306.7 C 475.4,304.4 477.8,302.2 480.5,300.9 C 483.2,299.6 486.9,299.4 490.2,299.1 C 493.4,298.8 496.7,299.0 500.0,299.0 C 503.3,299.0 506.6,298.8 509.8,299.1 C 513.0,299.4 516.8,299.6 519.5,300.9 C 522.2,302.2 524.6,304.4 525.8,306.7 C 527.0,309.0 526.5,312.4 526.5,314.8 C 526.5,317.2 525.0,319.5 525.5,321.2 C 526.0,322.9 527.3,323.6 529.7,325.1 C 532.1,326.6 536.9,327.9 540.0,330.0 Z"/>
+        <path class="contorno" d="M 569.8,330.0 C 572.1,333.6 573.1,338.2 572.0,341.8 C 570.9,345.4 566.9,349.1 563.2,351.9 C 559.5,354.7 554.1,356.6 549.7,358.5 C 545.4,360.4 541.2,361.9 537.1,363.5 C 533.0,365.1 529.4,366.8 525.4,368.0 C 521.4,369.2 517.1,370.2 512.9,370.6 C 508.7,371.0 504.2,370.5 500.0,370.1 C 495.8,369.7 492.1,368.7 487.8,368.4 C 483.5,368.1 479.4,368.4 474.4,368.3 C 469.4,368.2 463.3,368.9 457.8,368.1 C 452.3,367.3 445.5,366.1 441.5,363.6 C 437.5,361.1 434.4,356.9 433.6,353.0 C 432.9,349.1 435.0,344.1 437.0,340.3 C 439.0,336.5 443.4,333.1 445.8,330.0 C 448.2,326.9 450.2,324.8 451.1,322.0 C 452.1,319.2 451.2,316.4 451.5,313.2 C 451.8,310.0 451.3,306.1 452.7,302.9 C 454.1,299.6 456.5,296.2 459.7,293.7 C 462.9,291.1 467.3,289.3 471.6,287.6 C 475.9,285.9 480.6,284.7 485.3,283.6 C 490.0,282.5 495.0,281.2 500.0,280.8 C 505.0,280.4 510.7,280.2 515.4,281.4 C 520.1,282.6 524.9,285.0 528.2,287.8 C 531.5,290.6 533.4,295.0 535.1,298.3 C 536.8,301.6 536.8,305.2 538.5,307.9 C 540.2,310.6 542.1,312.2 545.3,314.3 C 548.5,316.4 553.8,317.9 557.9,320.5 C 562.0,323.1 567.4,326.4 569.8,330.0 Z"/>
+        <path class="contorno" d="M 597.0,330.0 C 597.7,335.0 595.8,340.6 593.2,345.3 C 590.6,350.0 585.8,354.4 581.5,358.3 C 577.2,362.2 572.3,365.6 567.5,368.8 C 562.7,372.0 557.9,375.0 552.5,377.4 C 547.1,379.8 541.3,381.7 535.4,382.9 C 529.5,384.1 523.2,384.3 517.3,384.6 C 511.4,384.9 505.9,384.5 500.0,384.8 C 494.1,385.1 488.7,386.0 482.1,386.6 C 475.6,387.2 468.0,388.8 460.7,388.7 C 453.4,388.6 444.6,388.1 438.2,385.8 C 431.8,383.5 425.4,379.3 422.0,374.8 C 418.6,370.3 417.6,363.9 417.5,358.6 C 417.4,353.3 419.9,347.7 421.2,342.9 C 422.4,338.1 424.3,334.2 425.0,330.0 C 425.7,325.8 425.2,322.1 425.5,317.8 C 425.8,313.6 425.3,308.9 426.6,304.5 C 427.9,300.1 430.0,295.6 433.1,291.6 C 436.2,287.6 440.6,284.0 445.2,280.6 C 449.8,277.2 455.1,274.1 460.7,271.3 C 466.3,268.5 472.4,265.6 479.0,263.9 C 485.6,262.2 493.1,260.7 500.0,261.0 C 506.9,261.3 514.4,263.2 520.3,265.9 C 526.2,268.6 531.2,273.2 535.4,277.1 C 539.6,281.0 541.9,285.6 545.4,289.0 C 548.9,292.4 551.9,295.0 556.4,297.6 C 560.9,300.2 567.0,301.9 572.4,304.9 C 577.8,307.9 584.8,311.2 588.9,315.4 C 593.0,319.6 596.3,325.0 597.0,330.0 Z"/>
+        <path class="contorno" d="M 622.2,330.0 C 621.9,336.4 619.2,343.1 616.2,349.1 C 613.2,355.1 609.0,360.9 604.3,366.2 C 599.6,371.4 594.2,376.5 588.1,380.6 C 582.0,384.7 574.7,388.2 567.4,390.9 C 560.1,393.5 552.0,395.0 544.5,396.5 C 537.0,398.0 529.6,398.5 522.2,399.9 C 514.8,401.3 507.9,403.0 500.0,404.7 C 492.1,406.4 483.6,409.2 474.6,410.2 C 465.6,411.2 454.9,412.3 445.9,410.9 C 436.9,409.5 427.3,406.1 420.6,401.7 C 413.9,397.2 408.9,390.4 405.6,384.2 C 402.3,378.0 401.8,370.7 400.8,364.4 C 399.8,358.1 400.2,352.2 399.8,346.5 C 399.4,340.8 398.5,335.6 398.2,330.0 C 397.9,324.4 397.1,318.8 397.8,313.2 C 398.5,307.6 400.0,301.7 402.5,296.2 C 405.0,290.7 408.7,285.2 412.9,280.0 C 417.1,274.8 422.1,269.6 427.8,264.8 C 433.5,260.0 439.9,254.9 447.3,251.2 C 454.7,247.5 463.5,244.0 472.3,242.7 C 481.1,241.4 491.3,241.7 500.0,243.4 C 508.7,245.1 517.2,249.3 524.4,253.0 C 531.6,256.7 537.1,261.7 543.1,265.5 C 549.1,269.3 553.9,272.6 560.2,275.6 C 566.5,278.6 573.6,280.5 580.7,283.6 C 587.8,286.7 596.4,289.9 602.6,294.4 C 608.9,298.9 614.9,304.7 618.2,310.6 C 621.5,316.5 622.5,323.6 622.2,330.0 Z"/>
+        <path class="contorno" d="M 649.2,330.0 C 648.8,337.9 646.8,346.1 643.5,353.6 C 640.2,361.1 635.6,368.5 629.6,374.9 C 623.6,381.3 615.9,387.2 607.8,391.9 C 599.7,396.6 590.1,400.1 581.2,403.3 C 572.3,406.6 563.3,408.6 554.5,411.4 C 545.7,414.2 537.7,417.1 528.6,420.2 C 519.5,423.3 510.4,427.6 500.0,430.2 C 489.6,432.8 477.7,435.8 466.4,436.0 C 455.1,436.2 442.5,434.7 432.3,431.3 C 422.1,427.9 412.6,421.7 405.4,415.4 C 398.2,409.1 393.3,401.0 389.0,393.7 C 384.7,386.4 382.3,378.8 379.6,371.7 C 376.9,364.6 374.7,357.8 373.0,350.9 C 371.3,343.9 369.6,337.0 369.2,330.0 C 368.8,323.0 369.1,315.8 370.5,308.7 C 371.9,301.6 374.2,294.6 377.3,287.5 C 380.4,280.4 384.0,273.2 388.9,266.2 C 393.8,259.2 399.2,251.8 406.6,245.7 C 414.0,239.6 423.1,233.5 433.0,229.8 C 442.9,226.1 455.1,223.9 466.3,223.7 C 477.5,223.5 489.6,226.0 500.0,228.6 C 510.4,231.2 519.7,236.0 528.7,239.5 C 537.7,243.0 545.2,246.5 553.8,249.6 C 562.3,252.7 571.0,254.7 580.0,257.8 C 589.0,260.9 599.2,263.6 607.9,268.0 C 616.5,272.4 625.5,278.0 631.9,284.3 C 638.2,290.6 643.1,298.4 646.0,306.0 C 648.9,313.6 649.6,322.1 649.2,330.0 Z"/>
+        <path class="contorno" d="M 680.3,330.0 C 679.8,339.6 677.4,349.5 673.0,358.4 C 668.6,367.3 661.6,376.0 653.7,383.3 C 645.9,390.6 635.5,396.7 625.9,402.3 C 616.3,407.9 605.9,412.1 596.1,416.8 C 586.4,421.6 577.3,425.9 567.4,430.8 C 557.5,435.7 548.0,441.6 536.8,446.2 C 525.6,450.8 513.0,456.0 500.0,458.4 C 487.0,460.8 472.0,461.9 458.7,460.4 C 445.4,458.9 431.5,454.6 420.1,449.4 C 408.7,444.2 398.8,436.5 390.3,429.1 C 381.8,421.7 375.2,413.2 369.2,405.1 C 363.2,397.0 358.2,388.9 354.1,380.6 C 350.0,372.4 346.6,364.0 344.3,355.6 C 342.0,347.2 340.8,338.6 340.3,330.0 C 339.9,321.4 340.4,312.8 341.6,304.0 C 342.8,295.2 344.3,286.2 347.4,277.1 C 350.5,268.1 354.0,258.3 360.1,249.7 C 366.2,241.1 374.1,232.0 384.1,225.4 C 394.1,218.8 407.0,213.3 419.9,210.3 C 432.8,207.3 447.8,206.9 461.2,207.5 C 474.6,208.1 487.8,211.2 500.0,213.6 C 512.2,216.0 523.0,219.2 534.3,221.8 C 545.6,224.4 556.3,226.2 567.6,228.9 C 578.9,231.6 591.1,233.8 602.3,237.7 C 613.5,241.6 625.3,246.4 635.0,252.5 C 644.7,258.6 653.7,266.3 660.5,274.4 C 667.3,282.5 672.5,291.8 675.8,301.1 C 679.1,310.4 680.8,320.4 680.3,330.0 Z"/>
+      </g>
+      <g class="contornos contornos-sec">
+        <path class="contorno" d="M 230.0,110.0 C 232.2,111.6 234.9,113.8 235.9,115.9 C 236.9,118.0 237.0,120.6 235.8,122.4 C 234.7,124.2 231.8,125.9 229.0,126.7 C 226.2,127.5 222.2,127.5 219.2,127.4 C 216.1,127.3 213.1,126.4 210.7,126.1 C 208.3,125.8 206.7,125.4 204.9,125.6 C 203.1,125.8 201.9,126.6 200.0,127.3 C 198.1,128.0 196.0,129.4 193.7,130.0 C 191.3,130.6 188.4,131.2 185.9,131.1 C 183.4,131.0 180.6,130.3 178.6,129.3 C 176.6,128.3 174.9,126.6 173.7,125.1 C 172.5,123.5 171.8,121.7 171.2,120.0 C 170.6,118.3 170.4,116.6 170.2,114.9 C 170.0,113.2 169.8,111.6 170.0,110.0 C 170.2,108.4 170.6,106.8 171.4,105.3 C 172.2,103.8 173.4,102.4 174.7,101.2 C 176.0,100.0 177.8,99.1 179.4,98.2 C 181.0,97.3 182.6,96.6 184.0,95.6 C 185.4,94.6 186.6,93.5 188.1,92.2 C 189.6,90.9 191.0,89.2 193.0,87.8 C 195.0,86.4 197.4,84.8 200.0,84.1 C 202.6,83.4 205.8,83.0 208.4,83.5 C 211.0,84.0 213.7,85.4 215.3,87.1 C 216.9,88.8 217.8,91.5 218.2,93.6 C 218.6,95.7 217.9,98.0 217.9,99.7 C 217.9,101.4 217.4,102.6 218.2,103.7 C 219.0,104.8 220.6,105.2 222.6,106.3 C 224.6,107.3 227.8,108.4 230.0,110.0 Z"/>
+        <path class="contorno" d="M 254.9,110.0 C 256.7,112.8 257.6,116.5 256.9,119.4 C 256.2,122.3 253.6,125.3 250.6,127.5 C 247.6,129.7 242.9,131.3 239.0,132.4 C 235.1,133.5 230.6,133.7 227.0,134.3 C 223.4,134.9 220.3,135.2 217.3,135.9 C 214.3,136.7 212.0,137.7 209.1,138.8 C 206.2,139.9 203.3,141.5 200.0,142.5 C 196.7,143.5 192.8,144.7 189.0,144.9 C 185.2,145.1 180.9,144.8 177.3,143.9 C 173.7,143.0 170.2,141.3 167.3,139.5 C 164.4,137.7 162.0,135.3 160.0,133.0 C 158.0,130.7 156.3,128.1 155.1,125.6 C 153.9,123.1 153.0,120.4 152.7,117.8 C 152.3,115.2 152.4,112.5 153.0,110.0 C 153.6,107.5 154.8,105.0 156.1,102.8 C 157.4,100.5 159.4,98.5 161.1,96.5 C 162.8,94.5 164.7,92.8 166.5,90.8 C 168.3,88.8 169.8,86.7 171.7,84.5 C 173.6,82.3 175.5,79.7 178.2,77.5 C 180.9,75.3 184.2,72.8 187.8,71.4 C 191.4,70.0 196.0,68.9 200.0,69.1 C 204.0,69.2 208.6,70.6 212.0,72.3 C 215.4,74.0 218.2,77.0 220.4,79.5 C 222.6,82.0 223.6,85.0 225.1,87.3 C 226.6,89.6 227.3,91.5 229.2,93.2 C 231.1,94.9 233.5,95.9 236.3,97.4 C 239.2,98.9 243.2,100.3 246.3,102.4 C 249.4,104.5 253.1,107.2 254.9,110.0 Z"/>
+        <path class="contorno" d="M 279.0,110.0 C 279.4,114.1 277.7,118.7 275.2,122.4 C 272.7,126.1 268.1,129.5 263.9,132.2 C 259.7,134.9 254.3,136.8 249.9,138.7 C 245.5,140.6 241.2,141.9 237.2,143.6 C 233.2,145.3 229.9,147.1 226.1,149.0 C 222.3,150.9 218.5,153.2 214.2,154.9 C 209.8,156.6 205.0,158.5 200.0,159.4 C 195.0,160.3 189.3,160.8 184.0,160.5 C 178.7,160.2 173.2,159.0 168.3,157.4 C 163.4,155.8 158.8,153.4 154.8,150.8 C 150.8,148.2 147.3,145.1 144.5,141.9 C 141.7,138.7 139.3,135.1 137.7,131.6 C 136.1,128.1 135.2,124.3 134.9,120.7 C 134.6,117.1 135.2,113.4 136.0,110.0 C 136.8,106.6 138.2,103.3 139.6,100.1 C 141.0,96.9 142.6,93.9 144.2,90.7 C 145.8,87.5 147.1,84.2 149.1,80.8 C 151.1,77.4 152.9,73.5 155.9,70.2 C 158.9,66.9 162.6,63.2 167.1,60.7 C 171.6,58.2 177.2,56.1 182.7,55.4 C 188.2,54.7 194.6,55.1 200.0,56.4 C 205.4,57.6 210.6,60.4 214.9,62.9 C 219.2,65.4 222.5,68.7 225.9,71.2 C 229.3,73.8 231.8,76.2 235.2,78.2 C 238.6,80.2 242.2,81.6 246.4,83.4 C 250.6,85.2 255.8,86.7 260.2,89.1 C 264.6,91.5 269.9,94.5 273.0,98.0 C 276.1,101.5 278.6,105.9 279.0,110.0 Z"/>
+        <path class="contorno" d="M 300.2,110.0 C 299.0,115.2 295.4,120.6 291.7,125.1 C 288.0,129.6 282.7,133.5 278.1,137.1 C 273.5,140.7 268.5,143.6 263.9,146.7 C 259.3,149.8 255.2,152.7 250.7,155.7 C 246.2,158.7 241.8,162.1 236.7,164.9 C 231.6,167.8 226.0,170.7 219.9,172.8 C 213.8,174.9 206.9,176.6 200.0,177.3 C 193.1,178.0 185.6,178.0 178.7,177.1 C 171.8,176.2 164.8,174.4 158.5,172.1 C 152.2,169.8 146.3,166.6 141.2,163.1 C 136.1,159.6 131.6,155.5 128.1,151.3 C 124.6,147.1 121.9,142.3 120.1,137.7 C 118.2,133.1 117.5,128.2 117.0,123.6 C 116.5,119.0 116.9,114.5 117.3,110.0 C 117.7,105.5 118.4,101.2 119.2,96.7 C 120.0,92.2 120.6,87.6 121.9,82.9 C 123.2,78.2 124.5,73.0 127.3,68.3 C 130.1,63.5 133.6,58.3 138.4,54.4 C 143.2,50.5 149.6,46.7 156.3,44.6 C 163.0,42.5 171.1,41.6 178.4,41.8 C 185.7,42.0 193.4,43.8 200.0,45.6 C 206.6,47.4 212.5,50.5 218.1,52.8 C 223.7,55.1 228.4,57.6 233.7,59.6 C 239.0,61.6 244.2,63.0 250.1,64.8 C 256.0,66.6 262.8,68.0 268.9,70.5 C 275.0,73.0 282.0,75.9 287.0,79.8 C 292.0,83.7 296.7,88.7 298.9,93.7 C 301.1,98.7 301.4,104.8 300.2,110.0 Z"/>
+      </g>
+      <g class="contornos contornos-ter">
+        <path class="contorno" d="M 826.0,460.0 C 827.9,461.4 830.4,463.4 831.0,465.1 C 831.6,466.8 831.2,469.0 829.9,470.4 C 828.6,471.8 825.7,472.8 823.3,473.4 C 820.9,474.0 817.9,473.9 815.7,474.2 C 813.5,474.4 811.8,474.5 810.0,474.9 C 808.2,475.3 806.9,476.0 805.2,476.4 C 803.5,476.8 801.7,477.3 800.0,477.3 C 798.3,477.3 796.5,476.8 794.8,476.4 C 793.1,476.0 791.8,475.3 790.0,474.9 C 788.2,474.5 786.5,474.4 784.3,474.2 C 782.1,473.9 779.1,474.0 776.7,473.4 C 774.3,472.8 771.4,471.8 770.1,470.4 C 768.8,469.0 768.4,466.8 769.0,465.1 C 769.6,463.4 772.1,461.4 774.0,460.0 C 775.9,458.6 778.8,457.8 780.3,456.8 C 781.8,455.8 782.7,455.2 783.1,454.1 C 783.5,453.0 782.7,451.6 782.7,450.1 C 782.7,448.6 782.5,446.4 783.3,444.9 C 784.1,443.4 785.7,442.0 787.4,441.2 C 789.1,440.4 791.5,440.1 793.6,439.9 C 795.7,439.7 797.9,439.8 800.0,439.8 C 802.1,439.8 804.3,439.7 806.4,439.9 C 808.5,440.1 810.9,440.4 812.6,441.2 C 814.3,442.0 815.9,443.4 816.7,444.9 C 817.5,446.4 817.3,448.6 817.3,450.1 C 817.3,451.6 816.5,453.0 816.9,454.1 C 817.3,455.2 818.2,455.8 819.7,456.8 C 821.2,457.8 824.1,458.6 826.0,460.0 Z"/>
+        <path class="contorno" d="M 847.6,460.0 C 848.9,462.4 849.0,465.5 848.1,467.9 C 847.2,470.3 844.6,472.7 842.1,474.6 C 839.6,476.5 836.2,477.9 833.4,479.2 C 830.6,480.5 827.9,481.6 825.2,482.7 C 822.5,483.8 820.0,484.9 817.2,485.7 C 814.4,486.5 811.5,487.1 808.6,487.3 C 805.7,487.5 802.8,487.1 800.0,487.0 C 797.2,486.9 794.6,486.5 791.6,486.4 C 788.6,486.3 785.7,486.6 782.2,486.6 C 778.8,486.6 774.5,487.0 770.9,486.3 C 767.3,485.6 763.1,484.6 760.6,482.7 C 758.1,480.8 756.5,477.8 756.1,475.2 C 755.8,472.6 757.2,469.3 758.5,466.8 C 759.8,464.3 762.3,462.1 763.6,460.0 C 764.9,457.9 765.7,456.4 766.2,454.5 C 766.7,452.6 766.1,450.5 766.4,448.3 C 766.6,446.1 766.6,443.6 767.7,441.5 C 768.8,439.4 770.6,437.1 772.8,435.4 C 775.0,433.7 777.9,432.4 780.8,431.2 C 783.7,430.0 786.8,429.1 790.0,428.3 C 793.2,427.5 796.6,426.6 800.0,426.5 C 803.4,426.4 807.2,426.5 810.3,427.4 C 813.4,428.3 816.5,430.2 818.6,432.1 C 820.8,434.0 821.9,436.9 823.2,439.0 C 824.5,441.1 824.8,443.2 826.2,444.9 C 827.6,446.6 829.3,447.6 831.7,449.0 C 834.1,450.4 837.8,451.6 840.4,453.4 C 843.0,455.2 846.3,457.6 847.6,460.0 Z"/>
+        <path class="contorno" d="M 867.2,460.0 C 867.3,463.5 865.7,467.2 863.9,470.5 C 862.1,473.8 859.0,476.8 856.2,479.5 C 853.4,482.2 850.2,484.8 846.9,487.0 C 843.6,489.2 840.1,491.3 836.3,492.8 C 832.5,494.3 828.3,495.4 824.2,496.2 C 820.1,497.0 815.9,497.2 811.9,497.6 C 807.9,498.1 804.1,498.3 800.0,498.9 C 795.9,499.5 791.7,500.5 787.0,501.1 C 782.3,501.7 776.8,502.6 771.7,502.3 C 766.7,502.0 760.8,501.1 756.7,499.1 C 752.6,497.1 749.0,493.7 747.0,490.4 C 745.0,487.1 744.7,482.8 744.6,479.2 C 744.5,475.6 745.8,472.0 746.2,468.8 C 746.6,465.6 747.1,462.9 747.2,460.0 C 747.3,457.1 746.8,454.3 746.9,451.3 C 747.0,448.3 747.1,445.0 748.1,442.0 C 749.1,439.0 750.9,435.9 753.1,433.1 C 755.3,430.3 758.3,427.6 761.5,425.2 C 764.7,422.8 768.2,420.4 772.2,418.4 C 776.2,416.4 780.6,414.4 785.2,413.4 C 789.8,412.4 795.2,411.9 800.0,412.5 C 804.8,413.1 809.7,414.9 813.7,416.9 C 817.7,418.9 820.8,422.1 823.8,424.5 C 826.8,426.9 828.7,429.5 831.5,431.5 C 834.3,433.5 837.3,434.9 840.8,436.6 C 844.3,438.3 849.0,439.5 852.7,441.7 C 856.4,443.9 860.8,446.6 863.2,449.6 C 865.6,452.7 867.1,456.5 867.2,460.0 Z"/>
+      </g>
+      <path class="ruta" d="M 40,60 Q 320,80 500,140 Q 620,170 700,190"/>
+      <circle class="pin-dot" cx="700" cy="190" r="5"/>
+      <text class="etiqueta" x="716" y="186">B4</text>
+      <circle class="pin-dot" cx="200" cy="110" r="3" opacity=".55"/>
+      <text class="etiqueta" x="212" y="114">D7</text>
+      <circle class="pin-dot" cx="800" cy="460" r="3" opacity=".55"/>
+      <text class="etiqueta" x="812" y="464">A2</text>
+      </g>
+    </svg>
+    <div class="contenido">
+      <div class="coord">8°58'12"N 79°31'44"O · CIUDAD DE PANAMÁ</div>
+      <h1>Tus clientes te están buscando. <em>Que te encuentren.</em></h1>
+      <p class="sub">Ponemos tu negocio en orden en todo internet: Google, Bing, Apple Maps, reseñas y tu sitio web. Para que aparezca, convenza y venda.</p>
+      <div class="btns">
+        <a class="btn naranja" href="/diagnostico.html">Hacer mi diagnóstico gratis</a>
+        <a class="btn-s" href="#caso">Ver resultados reales</a>
       </div>
-      <div class="postal-dir">
-        <svg width="108" height="131" viewBox="0 0 120 145" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="align-self:flex-end;transform:rotate(3deg);filter:drop-shadow(0 4px 10px rgba(12,42,48,.18))"><rect width="120" height="145" rx="10" fill="#14424A"/><rect x="13" y="13" width="94" height="119" rx="5" fill="#FBF7EC"/><path d="M60 38c-14 0-24 10-24 24 0 17 24 40 24 40s24-23 24-40c0-14-10-24-24-24z" fill="#E8503A"/><circle cx="60" cy="62" r="9" fill="#FBF7EC"/><path d="M13 110c16-8 31-8 47-1s32 5 47-2v20a5 5 0 0 1-5 5H18a5 5 0 0 1-5-5z" fill="#1C7A8C"/></svg>
-        <div class="matasellos" aria-hidden="true">PANAMÁ · 2026 ·<br>ENCONTRADO</div>
-        <div class="dir-lineas">
-          <p>Para: el negocio que nadie encuentra</p>
-          <p>De: los clientes que sí te buscaron</p>
-          <p>Asunto: apareciste — te compramos</p>
-        </div>
+      <div class="grid3">
+        <div class="cel"><span class="n">GOOGLE BUSINESS</span><div class="v">30<small> pts</small></div><div class="d">Perfil verificado y activo</div></div>
+        <div class="cel"><span class="n">RESEÑAS</span><div class="v">25<small> pts</small></div><div class="d">Reputación construida</div></div>
+        <div class="cel"><span class="n">ECOSISTEMA</span><div class="v">15<small> pts</small></div><div class="d">Presencia en cada plataforma</div></div>
       </div>
     </div>
   </div>
@@ -462,17 +343,17 @@ footer a{color:var(--sol);text-decoration:none}
       <span class="eyebrow">Gratis · 3 minutos</span>
       <h2>¿Qué tan fácil es encontrar tu negocio hoy?</h2>
       <p class="lead">Responde unas preguntas sobre tu negocio y te damos un puntaje sobre 100, un diagnóstico corto y el plan exacto que necesitas. Sin compromiso, sin llamadas de venta.</p>
-      <a class="btn" href="/diagnostico.html">Empezar mi diagnóstico</a>
+      <a class="btn naranja" href="/diagnostico.html">Empezar mi diagnóstico</a>
     </div>
     <div class="score-card" aria-label="Ejemplo de cómo se ve el resultado del diagnóstico">
-      <span class="mono" style="font-size:.72rem;letter-spacing:.14em;color:var(--tinta-suave)">EJEMPLO DE RESULTADO</span>
+      <span class="mono" style="font-size:.68rem;letter-spacing:.14em;color:rgba(236,238,231,.6)">EJEMPLO DE RESULTADO</span>
       <div class="score-num">42<small>/100</small></div>
       <div class="score-bar"><div></div></div>
       <div class="score-item"><span>Google Business Profile</span><span class="mono mal">INCOMPLETO</span></div>
       <div class="score-item"><span>Reseñas y reputación</span><span class="mono mal">SIN RESPONDER</span></div>
       <div class="score-item"><span>Sitio web / SEO básico</span><span class="mono ok">ACEPTABLE</span></div>
       <div class="score-item"><span>Presencia en plataformas</span><span class="mono mal">AUSENTE</span></div>
-      <p style="font-family:'Space Mono',monospace;font-size:.68rem;color:var(--tinta-suave);margin-top:16px;text-align:center">Así se ve tu reporte. El tuyo se calcula con tus respuestas.</p>
+      <p class="mono" style="font-size:.65rem;color:rgba(236,238,231,.5);margin-top:16px;text-align:center">Así se ve tu reporte. El tuyo se calcula con tus respuestas.</p>
     </div>
   </div></div>
 </section>
@@ -592,7 +473,7 @@ footer a{color:var(--sol);text-decoration:none}
 
     <div class="sprint">
       <div>
-        <span class="mono" style="font-size:.7rem;letter-spacing:.14em;color:var(--sello)">PAGO ÚNICO</span>
+        <span class="mono" style="font-size:.7rem;letter-spacing:.14em;color:var(--signal)">PAGO ÚNICO</span>
         <h3>Puesta a Punto</h3>
         <p>Lo arreglamos todo una vez — Google, sitio, reseñas, directorios — y te entregamos tu Manual del Propietario con entrenamiento incluido, para que tú mismo lo mantengas en 20 minutos por semana. Con 30 días de soporte.</p>
       </div>
@@ -630,7 +511,7 @@ footer a{color:var(--sol);text-decoration:none}
           <li>1 email mensual a tu base de clientes</li>
           <li>Reporte con posiciones en Google + reunión trimestral</li>
         </ul>
-        <a class="btn" href="#contacto">Quiero crecer</a>
+        <a class="btn naranja" href="#contacto">Quiero crecer</a>
       </div>
 
       <div class="plan">
@@ -652,7 +533,7 @@ footer a{color:var(--sol);text-decoration:none}
   </div>
 </section>
 
-<!-- CARTA: por qué existe -->
+<!-- BITÁCORA: por qué existe -->
 <section class="carta-sec">
   <div class="wrap">
     <div class="carta">
@@ -701,7 +582,7 @@ footer a{color:var(--sol);text-decoration:none}
 <!-- QUIÉN -->
 <section class="quien wrap" id="quien">
   <div class="flexo">
-    <div class="quien-foto">[ Foto de CJ aquí — polaroid ]</div>
+    <div class="quien-foto">[ Foto de CJ aquí ]</div>
     <div>
       <span class="eyebrow">Quiénes somos</span>
       <h2>Operadores, no teóricos</h2>
@@ -750,21 +631,19 @@ footer a{color:var(--sol);text-decoration:none}
 <!-- CTA FINAL -->
 <section class="final" id="contacto">
   <div class="wrap">
-    <span class="mano">Malaya…</span>
+    <span class="mono-linea">DESTINO FINAL</span>
     <h2>Que nunca más digan "ojalá lo hubiera encontrado"</h2>
-    <a class="btn" href="/diagnostico.html">Pedir mi diagnóstico gratis</a>
+    <a class="btn naranja" href="/diagnostico.html">Pedir mi diagnóstico gratis</a>
     <p class="nota">Escríbenos y te respondemos en menos de 24 horas · Panamá</p>
   </div>
 </section>
 
 <footer>
   <div class="wrap">
-    <span style="display:flex;align-items:center;gap:12px"><svg width="26" height="31" viewBox="0 0 120 145" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="120" height="145" rx="10" fill="#FBF7EC"/><rect x="13" y="13" width="94" height="119" rx="5" fill="#0C2A30"/><path d="M60 38c-14 0-24 10-24 24 0 17 24 40 24 40s24-23 24-40c0-14-10-24-24-24z" fill="#E8503A"/><circle cx="60" cy="62" r="9" fill="#FBF7EC"/><path d="M13 110c16-8 31-8 47-1s32 5 47-2v20a5 5 0 0 1-5 5H18a5 5 0 0 1-5-5z" fill="#1C7A8C"/></svg>Malaya Digital · malayadigital.co · Optimización de Presencia y Visibilidad Online · Panamá © 2026</span>
+    <span style="display:flex;align-items:center;gap:12px"><img src="/logo-malaya.png" alt="">Malaya Digital · malayadigital.co · Optimización de Presencia y Visibilidad Online · Panamá © 2026</span>
     <span>Un proyecto de <a href="#">BEYOA</a></span>
   </div>
 </footer>
-
-<div class="airmail" role="presentation"></div>
 
 <script>
 (function(){

@@ -50,7 +50,7 @@ export default async function handler(req, res) {
       subject: `Nuevo diagnóstico: ${esc(lead.negocio || lead.nombre)} — ${total}/100`,
       html: `
         <div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto">
-          <h2 style="color:#14424A">Nuevo lead del diagnóstico</h2>
+          <h2 style="color:#16233B">Nuevo lead del diagnóstico</h2>
           <p><strong>Puntaje: ${total}/100 — ${esc(banda)}</strong></p>
           <table style="border-collapse:collapse;margin-bottom:16px">
             <tr><td style="padding:4px 12px 4px 0">Nombre</td><td><strong>${esc(lead.nombre)}</strong></td></tr>
@@ -60,9 +60,9 @@ export default async function handler(req, res) {
           </table>
           <p><strong>Mayor fuga:</strong> ${esc(mayorFuga)}</p>
           <p><strong>Plan sugerido:</strong> ${esc(plan)}</p>
-          <h3 style="color:#14424A;margin-top:24px">Desglose por área</h3>
+          <h3 style="color:#16233B;margin-top:24px">Desglose por área</h3>
           <table style="border-collapse:collapse">${desgloseHtml}</table>
-          <h3 style="color:#14424A;margin-top:24px">Respuestas completas</h3>
+          <h3 style="color:#16233B;margin-top:24px">Respuestas completas</h3>
           <ol style="padding-left:20px">${respuestasHtml}</ol>
         </div>
       `,
@@ -75,10 +75,10 @@ export default async function handler(req, res) {
       subject: `Tu diagnóstico de visibilidad: ${total}/100`,
       html: `
         <div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto">
-          <h2 style="color:#14424A">Hola ${esc(lead.nombre)},</h2>
+          <h2 style="color:#16233B">Hola ${esc(lead.nombre)},</h2>
           <p>Gracias por completar el diagnóstico de <strong>${esc(lead.negocio)}</strong>. Aquí está tu resultado:</p>
-          <div style="background:#F6F0E2;border-radius:12px;padding:24px;text-align:center;margin:20px 0">
-            <div style="font-size:3rem;font-weight:bold;color:#E8503A">${total}<span style="font-size:1.2rem;color:#888">/100</span></div>
+          <div style="background:#ECEEE7;border-radius:12px;padding:24px;text-align:center;margin:20px 0">
+            <div style="font-size:3rem;font-weight:bold;color:#FF5A36">${total}<span style="font-size:1.2rem;color:#888">/100</span></div>
             <p style="font-weight:bold">${esc(banda)}</p>
           </div>
           <p><strong>Tu mayor fuga:</strong> ${esc(mayorFuga)}</p>
