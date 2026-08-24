@@ -14,13 +14,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Guía paso a paso para lanzar tu negocio online (sin perderte en el camino) | MALAYA</title>
 <link rel="canonical" href="https://malayadigital.co/blog-paso-a-paso-lanzar-negocio-online.html">
+<link rel="alternate" hreflang="es" href="https://malayadigital.co/blog-paso-a-paso-lanzar-negocio-online.html">
+<link rel="alternate" hreflang="en" href="https://malayadigital.co/en/blog-launch-business-online-step-by-step.html">
+<link rel="alternate" hreflang="x-default" href="https://malayadigital.co/blog-paso-a-paso-lanzar-negocio-online.html">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Guía paso a paso para lanzar tu negocio online | MALAYA">
 <meta property="og:description" content="Desde definir qué vendes hasta medir resultados reales: los 8 pasos, en orden, para que tu negocio nazca visible en internet — no invisible.">
 <meta property="og:url" content="https://malayadigital.co/blog-paso-a-paso-lanzar-negocio-online.html">
 <meta property="og:locale" content="es_PA">
 <meta name="twitter:card" content="summary">
-<link rel="icon" type="image/png" href="/favicon.png"><path d='M20,104 L20,24 L60,64 L100,24 L100,104' fill='none' stroke='%2316233B' stroke-width='15' stroke-linecap='round' stroke-linejoin='round'/><circle cx='82' cy='86' r='12' fill='%23ECEEE7'/><circle cx='82' cy='86' r='7' fill='%23FF5A36'/></svg>">
+<link rel="icon" type="image/png" href="/favicon.png">
 <meta name="description" content="Desde definir qué vendes hasta medir resultados reales: los 8 pasos, en orden, para que tu negocio nazca visible en internet — no invisible.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -97,7 +100,7 @@ footer{padding:26px 0;font-size:.8rem;color:var(--tinta-suave);border-top:1px so
 <div class="wrap">
   <nav>
     <a class="logo" href="/"><img src="/logo-malaya.png" alt="" style="height:28px;width:auto;display:block;margin-right:2px">MALAYA<span style="color:#FF5A36">.</span></a>
-    <a class="vuelve" href="/">← Volver al inicio</a>
+    <span><a class="vuelve" href="/en/blog-launch-business-online-step-by-step.html" style="margin-right:18px;opacity:.7">EN</a><a class="vuelve" href="/">← Volver al inicio</a></span>
   </nav>
 
   <article>
@@ -175,5 +178,22 @@ footer{padding:26px 0;font-size:.8rem;color:var(--tinta-suave);border-top:1px so
   <footer>Malaya Digital · malayadigital.co · Optimización de Presencia y Visibilidad Online · Panamá © 2026</footer>
 </div>
 <div class="airmail"></div>
+<div id="langSug" style="display:none;position:fixed;bottom:16px;left:50%;transform:translateX(-50%);z-index:300;background:#101B2D;color:#ECEEE7;padding:12px 18px;border-radius:6px;box-shadow:0 8px 24px rgba(16,27,45,.35);font-size:.85rem;display:none;align-items:center;gap:14px;max-width:92vw">
+<span>This site is available in English</span>
+<a href="https://malayadigital.co/en/blog-launch-business-online-step-by-step.html" style="color:#FF5A36;font-weight:600;text-decoration:none;white-space:nowrap">View in English →</a>
+<button onclick="document.getElementById('langSug').style.display='none';try{localStorage.setItem('malaya_lang_sug','no')}catch(e){}" aria-label="Cerrar" style="background:none;border:none;color:#ECEEE7;cursor:pointer;font-size:1rem;padding:0 2px">✕</button>
+</div>
+<script>
+(function(){
+  try{
+    if(localStorage.getItem('malaya_lang_sug')==='no') return;
+    var l=(navigator.language||'').toLowerCase();
+    if(l.indexOf('en')===0){
+      var b=document.getElementById('langSug');
+      b.style.display='flex';
+    }
+  }catch(e){}
+})();
+</script>
 </body>
 </html>

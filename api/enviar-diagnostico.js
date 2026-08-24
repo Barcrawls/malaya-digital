@@ -23,7 +23,7 @@ export default async function handler(req, res) {
   }
 
   try {
-    const { lead, total, banda, mayorFuga, plan, desglose, respuestas } = req.body || {};
+    const { lead, idioma, total, banda, mayorFuga, plan, desglose, respuestas } = req.body || {};
 
     // Validación mínima: sin estos campos no hay nada que mandar.
     if (!lead || !lead.email || typeof total !== 'number') {
@@ -68,22 +68,27 @@ export default async function handler(req, res) {
       `,
     };
 
-    // ---- Correo 2: confirmación para la persona ----
+    // ---- Correo 2: confirmación para la persona (en su idioma) ----
+    const en = idioma === 'en';
     const emailPersona = {
       from: 'Malaya Digital <hola@malayadigital.co>',
       to: [lead.email],
-      subject: `Tu diagnóstico de visibilidad: ${total}/100`,
+      subject: en ? `Your visibility checkup: ${total}/100` : `Tu diagnóstico de visibilidad: ${total}/100`,
       html: `
         <div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto">
-          <h2 style="color:#16233B">Hola ${esc(lead.nombre)},</h2>
-          <p>Gracias por completar el diagnóstico de <strong>${esc(lead.negocio)}</strong>. Aquí está tu resultado:</p>
+          <h2 style="color:#16233B">${en ? 'Hi' : 'Hola'} ${esc(lead.nombre)},</h2>
+          <p>${en
+            ? `Thank you for completing the checkup for <strong>${esc(lead.negocio)}</strong>. Here is your result:`
+            : `Gracias por completar el diagnóstico de <strong>${esc(lead.negocio)}</strong>. Aquí está tu resultado:`}</p>
           <div style="background:#ECEEE7;border-radius:12px;padding:24px;text-align:center;margin:20px 0">
             <div style="font-size:3rem;font-weight:bold;color:#FF5A36">${total}<span style="font-size:1.2rem;color:#888">/100</span></div>
             <p style="font-weight:bold">${esc(banda)}</p>
           </div>
-          <p><strong>Tu mayor fuga:</strong> ${esc(mayorFuga)}</p>
-          <p><strong>Plan recomendado:</strong> ${esc(plan)}</p>
-          <p>Te escribiremos pronto para revisar esto contigo. Si quieres adelantarte, responde este correo o escríbenos por WhatsApp.</p>
+          <p><strong>${en ? 'Your biggest leak:' : 'Tu mayor fuga:'}</strong> ${esc(mayorFuga)}</p>
+          <p><strong>${en ? 'Recommended plan:' : 'Plan recomendado:'}</strong> ${esc(plan)}</p>
+          <p>${en
+            ? "We'll write to you soon to go over this with you. If you'd like to get ahead, reply to this email or message us on WhatsApp."
+            : 'Te escribiremos pronto para revisar esto contigo. Si quieres adelantarte, responde este correo o escríbenos por WhatsApp.'}</p>
           <p style="color:#888;font-size:.85rem;margin-top:24px">Malaya Digital · malayadigital.co</p>
         </div>
       `,
